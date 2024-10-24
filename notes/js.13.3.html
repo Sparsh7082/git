@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.13.3</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .explain{
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.13.2.html">
+            <button>Previous</button>
+        </a>
+        <h1>Practice Question</h1>
+        <a href="js.12.2.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="explain">
+        <h2>let arr = [100,200,"vikas",[1,2,3,4],function fun(){console.log("I am fun");},function fun2(){return "dice academy"}]</h2>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>For loop</h2>
+            <pre>
+                for(let i=0;i&lt;arr.length;i++){
+                    console.log(arr[i])
+                }
+            </pre>
+        </div>
+        <div class="answer">
+            <h2>Output:</h2>
+            <pre>
+                100
+                200
+                vikas
+                [ 1, 2, 3, 4 ]
+                [Function: fun]
+                [Function: fun2]
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>While loop</h2>
+            <pre>
+                let i=0;
+                while(i&lt;arr.length){
+                    console.log(arr[i]);
+                    i++;    
+                }
+            </pre>
+        </div>
+        <div class="answer">
+            <h2>Output:</h2>
+            <pre>
+                100
+                200
+                vikas
+                [ 1, 2, 3, 4 ]
+                [Function: fun]
+                [Function: fun2]
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>Do While loop</h2>
+            <pre>
+                let i=0;
+                do {
+                    console.log(arr[i]);
+                    i++;
+
+                } while (i&lt;arr.length);
+            </pre>
+        </div>
+        <div class="answer">
+            <h2>Output:</h2>
+            <pre>
+                100
+                200
+                vikas
+                [ 1, 2, 3, 4 ]
+                [Function: fun]
+                [Function: fun2]
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>For of loop</h2>
+            <pre>
+                for(let array of arr){
+                    console.log(array);   
+                }
+            </pre>
+        </div>
+        <div class="answer">
+            <h2>Output:</h2>
+            <pre>
+                100
+                200
+                vikas
+                [ 1, 2, 3, 4 ]
+                [Function: fun]
+                [Function: fun2]
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>For each loop</h2>
+            <pre>
+                arr.forEach(function fun(array){
+                    console.log(array);    
+                })
+            </pre>
+        </div>
+        <div class="answer">
+            <h2>Output:</h2>
+            <pre>
+                100
+                200
+                vikas
+                [ 1, 2, 3, 4 ]
+                [Function: fun]
+                [Function: fun2]
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>Last function fire</h2>
+            <pre>
+                console.log(arr[arr.length-1]());
+            </pre>
+        </div>
+        <div class="answer">
+            <h2>Output:</h2>
+            <pre>
+                dice academy
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>catch the return of last function</h2>
+            <pre>
+                let rv = arr[arr.length-1]();
+                console.log(rv);
+            </pre>
+        </div>
+        <div class="answer">
+            <h2>Output:</h2>
+            <pre>
+                dice academy
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>accessing the array element of nested array</h2>
+            <pre>
+                console.log(arr[3][2]);
+            </pre>
+        </div>
+        <div class="answer">
+            <h2>Output:</h2>
+            <pre>
+                3
+            </pre>
+        </div>
+    </div>
+</body>
+</html>

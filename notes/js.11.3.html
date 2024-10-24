@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.11.3</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .explain{
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        .types{
+            display: flex;
+            justify-content: space-around;
+        }
+        .pre{
+            width: 30vw;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        .post{
+            width: 30vw;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        .example{
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.11.2.html">
+            <button>Previous</button>
+        </a>
+        <h1>Pre and post increment</h1>
+        <a href="js.11.4.html">
+            <button>Next</button>
+        </a>
+    </div>
+
+    <div class="explain">
+        <p>+,- => operator</p>
+        <p>a,b => operand</p>
+        <p>i++ (here the ++ is <b>unary operator</b> as it works on single operand)</p>
+        <p>a+b (here the + is <b>binary operator</b> as it works between two operand)</p>
+    </div>
+    <div class="types">
+        <div class="pre">
+            <h2>pre increment</h2>
+            <p>example: ++i, --i</p>
+            <p><b>first update then use</b></p>
+            <p>
+                let x=10 <br><br>
+                console.log(++x); //Ans=11 <br><br>
+                console.log(x); //Ans=11
+            </p>
+        </div>
+        <div class="post">
+            <h2>post increment</h2>
+            <p>example: i++, i--</p>
+            <p><b>first use then update</b></p>
+            <p>
+                let x=10 <br><br>
+                console.log(x++); //Ans=10 <br><br>
+                console.log(x); //Ans=11
+            </p>
+        </div>
+    </div>
+    <div class="example">
+        <h2>example</h2>
+        <h4>example 1</h4>
+        <p>
+            let a=10 <br><br>
+            console.log(++a); //Ans:11 <br><br>
+            console.log(a++); //Ans:11 <br><br>
+            console.log(a); //Ans:12
+        </p>
+        <h4>example 2</h4>
+        <p>
+            let a=10 <br><br>
+            console.log(++a + a++); <br><br>
+            Ans: 11 + 11 = 22
+        </p>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,15 @@
+4 october 2024
+
+nested loops
+
+loops inside loops
+
+
+
+
+break
+sabse paas waale loop k bahar fenkega
+
+continue
+wo wali iteration skip
+

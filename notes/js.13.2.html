@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.13.2</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .explain{
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.13.1.html">
+            <button>Previous</button>
+        </a>
+        <h1>Arrays Traversal</h1>
+        <a href="js.13.3.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="explain">
+        <p>We can traverse an array with the help of index.</p>
+        <p>work something on each element of array</p>
+        <p><b>Callback function-</b> passing one function inside another function as parameter.</p>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>For loop</h2>
+            <pre>
+                let names = ["vikas","rohan","puneet","reena","seema","rani","kalu"]
+
+                for(let idx=0;idx&lt;names.length;idx++){
+                    console.log(names[idx])
+                }
+            </pre>
+        </div>
+        <div class="answer">
+            <h2>Output:</h2>
+            <pre>
+                vikas
+                rohan
+                puneet
+                reena
+                seema
+                rani
+                kalu
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>While loop</h2>
+            <pre>
+                let names = ["vikas","rohan","puneet","reena","seema","rani","kalu"]
+
+                let idx=0;
+                while(idx&lt;names.length){
+                    console.log(names[idx]);
+                    idx++;
+                }
+            </pre>
+        </div>
+        <div class="answer">
+            <h2>Output:</h2>
+            <pre>
+                vikas
+                rohan
+                puneet
+                reena
+                seema
+                rani
+                kalu
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>Do while loop</h2>
+            <pre>
+                let names = ["vikas","rohan","puneet","reena","seema","rani","kalu"]
+
+                let idx = 0;
+                do {
+                    console.log(names[idx]);
+                    idx++;
+                } while (idx&lt;names.length);
+            </pre>
+        </div>
+        <div class="answer">
+            <h2>Output:</h2>
+            <pre>
+                vikas
+                rohan
+                puneet
+                reena
+                seema
+                rani
+                kalu
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>For of loop</h2>
+            <pre>
+                let names = ["vikas","rohan","puneet","reena","seema","rani","kalu"]
+
+                for(let student of names){
+                    console.log(student); 
+                }
+            </pre>
+        </div>
+        <div class="answer">
+            <h2>Output:</h2>
+            <pre>
+                vikas
+                rohan
+                puneet
+                reena
+                seema
+                rani
+                kalu
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>For each loop</h2>
+            <pre>
+                let names = ["vikas","rohan","puneet","reena","seema","rani","kalu"]
+
+                names.forEach(function fun(student){
+                    console.log(student);  
+                })
+            </pre>
+        </div>
+        <div class="answer">
+            <h2>Output:</h2>
+            <pre>
+                vikas
+                rohan
+                puneet
+                reena
+                seema
+                rani
+                kalu
+            </pre>
+        </div>
+    </div>
+</body>
+</html>

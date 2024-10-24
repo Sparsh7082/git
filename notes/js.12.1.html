@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.12.1</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .explain{
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        .types{
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+        .first{
+            border-radius: 10px;
+            border: 2px solid black;
+            width: 40vw;
+            text-align: center;
+        }
+        .second{
+            border-radius: 10px;
+            border: 2px solid black;
+            width: 40vw;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.11.7.html">
+            <button>Previous</button>
+        </a>
+        <h1>Arrays []</h1>
+        <a href="js.13.1.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="explain">
+        <p>Array is a <b>linear data structure</b>. As it keeps the data in the linear format.</p>
+        <p><b>Example</b> arr = [1,2,3,4,5]</p>
+        <p>In Javascript arrays are <b>hetrogenous</b> because it can contain anything like number, string, boolean, function, array, etc. in <b>one array</b>.</p>
+        <p>Array is the <b>index based</b>. The first element is at 0 index.</p>
+        <p>Array is <b>object</b> type.</p>
+        <p>Arrays are <b>Mutable</b> which means the values can be changed</p>
+    </div>
+    <div class="types">
+        <div class="first">
+            <h2>Method 1</h2>
+            <p> let arr=[1,2,3,"sparsh",true,function{}]</p>
+        </div>
+        <div class="second">
+            <h2>Method 2</h2>
+            <p>let arr = new Array(1,2,3,"sparsh",true,function{})</p>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h3>Print an element with the help of index. arr = [1,2,3,4,5]</h3>
+        </div>
+        <div class="answer">
+            <p>console.log(arr[0])</p>
+            <p><b>output:</b> 1</p>
+            <p class="red">-1 will not work here</p>
+            <p style="text-align: center;"><b>OR</b></p>
+            <p>console.log(arr.at(0)) <b>(latest version)</b></p>
+            <p><b>output:</b> 1</p>
+            <p>console.log(arr.at(-1))</p>
+            <p><b>output:</b> 5</p>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h3>Changing the value of elements in an array. arr = [1,2,3,4,5]</h3>
+        </div>
+        <div class="answer">
+            <p>arr[0] = 10</p>
+            <p>console.log(arr)</p>
+            <p><b>output:</b> [10,2,3,4,5]</p>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h3>Number of elements in an array. arr = [1,2,3,4,5]</h3>
+        </div>
+        <div class="answer">
+            <p>console.log(arr.length)</p>
+            <p><b>output:</b> 5</p>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h3>Last value of array. arr = [1,2,3,4,5,"sparsh",true]</h3>
+        </div>
+        <div class="answer">
+            <p>console.log(arr[arr.length-1])</p>
+            <p><b>output:</b> true</p>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h3><span class="green">Insert</span> a new value in array. arr = [1,2,3,4,5,"sparsh",true]</h3>
+        </div>
+        <div class="answer">
+            <p>arr.push(3)</p>
+            <p>console.log(arr)</p>
+            <p><b>output:</b> [1,2,3,4,5,"sparsh",true,3]</p>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h3><span class="red">Delete</span> the last value of array. arr = [1,2,3,4,5,"sparsh",true]</h3>
+        </div>
+        <div class="answer">
+            <p>arr.pop()</p>
+            <p>console.log(arr)</p>
+            <p><b>output:</b> [1,2,3,4,5,"sparsh"]</p>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h3><span class="green">Insert</span> a value in the first place. arr = [1,2,3,4,5,"sparsh",true]</h3>
+        </div>
+        <div class="answer">
+            <p>arr.unshift("Hello")</p>
+            <p>console.log(arr)</p>
+            <p><b>output:</b> ["Hello",1,2,3,4,5,"sparsh",true]</p>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h3><span class="red">Delete</span> the first element. arr = [1,2,3,4,5,"sparsh",true]</h3>
+        </div>
+        <div class="answer">
+            <p>arr.shift()</p>
+            <p>console.log(arr)</p>
+            <p><b>output:</b> [2,3,4,5,"sparsh",true]</p>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h3>Finding an element in an array. arr = [1,2,3,4,5,"sparsh",true]</h3>
+        </div>
+        <div class="answer">
+            <p>console.log(arr.includes(3))</p>
+            <p><b>output:</b> true</p>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h3>Finding the index of an element in an array. arr = [1,2,3,4,5,"sparsh",true]</h3>
+        </div>
+        <div class="answer">
+            <p>console.log(arr.indexOf(3))</p>
+            <p><b>output:</b> 2</p>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h3>Finding the index of an element which is <span class="red">not</span> in an array. arr = [1,2,3,4,5,"sparsh",true]</h3>
+        </div>
+        <div class="answer">
+            <p>console.log(arr.indexOf(100))</p>
+            <p><b>output:</b> -1</p>
+        </div>
+    </div>
+    <div class="types">
+        <div class="first">
+            <h2>indexOf</h2>
+            <p>It gives the index of the first element it found.</p>
+            <p><b>for example:</b> arr=[1,2,3,4,5,"sparsh",3,1,2]</p>
+            <p>console.log(arr.indexOf(1))</p>
+            <p><b>output:</b> 0</p>
+        </div>
+        <div class="second">
+            <h2>lastIndexOf</h2>
+            <p>It gives the index of the last element it found.</p>
+            <p><b>for example:</b> arr=[1,2,3,4,5,"sparsh",3,1,2]</p>
+            <p>console.log(arr.indexOf(1))</p>
+            <p><b>output:</b> 7</p>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h3>Converting array to string. arr = [1,2,3,4,5,"sparsh",true]</h3>
+        </div>
+        <div class="answer">
+            <p>let str = arr.join()</p>
+            <p>console.log(typeof str)</p>
+            <p><b>output:</b> string</p>
+            <p>here the join plays the role of seperator as well. for example: join("*") puts the * between the elements.</p>
+            <p style="text-align: center;"><b>OR</b></p>
+            <p>let str = arr.toString() <b>(earlier version)</b></p>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>Reverse an array arr = [1,2,3,4,5]</h2>
+        </div>
+        <div class="answer">
+            <p>console.log(arr.reverse())</p>
+            <p><b>Output:</b> [5,4,3,2,1]</p>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>Sort an array arr = [300,500,100,400]</h2>
+        </div>
+        <div class="answer">
+            <p>console.log(arr.sort())</p>
+            <p><b>Output:</b> [100,300,400,500]</p>
+        </div>
+    </div>
+</body>
+</html>

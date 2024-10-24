@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.11.2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.11.1.html">
+            <button>Previous</button>
+        </a>
+        <h1>Prime in range and sum</h1>
+        <a href="js.11.3.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="field">
+        <div class="code">
+<pre>
+<code>
+function primeinrangeandtheirsum(start,end){
+    
+    let sum=0;
+    
+    for(let num=start;num<=end;num++){
+    
+        if(num==1){
+            continue;
+        }
+    
+        let nof=0;
+    
+        for(let div=2;div*div<=num;div++){
+    
+            if(num%div==0){
+                nof++;
+                break;
+            }
+        }
+    
+        if(nof==0){
+            sum=sum+num;
+        }
+    }
+    return sum;
+}
+
+let ans= primeinrangeandtheirsum(1,50);
+console.log(ans)
+</code>
+</pre>
+        </div>
+        
+        <div class="answer">
+            <input type="number" id="start">
+            <input type="number" id="end">
+            <button onclick="primeinrangeandtheirsum()">go</button>
+            <br>
+            <p id="answer"></p>
+            <script>
+                function primeinrangeandtheirsum(){
+                    var start = parseInt(document.getElementById("start").value);
+                    var end = parseInt(document.getElementById("end").value);
+                    var sum = 0;
+    
+                    for(var num=start;num<=end;num++){
+    
+                        if(num==1){
+                            continue;
+                        }
+    
+                        var nof=0;
+    
+                        for(var div=2;div*div<=num;div++){
+    
+                            if(num%div==0){
+                                nof++;
+                                break;
+                            }
+                        }
+    
+                        if(nof==0){
+                            sum=sum+num;
+                        }
+                    }
+                    document.getElementById("answer").innerHTML = sum;
+                }
+                
+                
+            </script>
+        </div>
+    </div>
+</body>
+</html>

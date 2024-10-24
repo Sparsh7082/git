@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.13.1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.12.1.html">
+            <button>Previous</button>
+        </a>
+        <h1>Array Methods / Functions</h1>
+        <a href="js.13.2.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>array.length</h2>
+            <p>Gives the number of elements in an array.</p>
+        </div>
+        <div class="answer">
+            <pre>
+                let array = [11,22,33,44,55,66,77,88,99]
+
+                console.log(array.length)
+
+                <b>Output:</b> 9
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>array.push()</h2>
+            <p><span class="green">Insert</span> the element into last.</p>
+        </div>
+        <div class="answer">
+            <pre>
+                let array = [11,22,33,44,55,66,77,88,99]
+
+                array.push(100);
+                console.log(array);
+
+                <b>Output:</b> [11, 22, 33, 44, 55,66, 77, 88, 99, 100]
+              
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>array.pop()</h2>
+            <p><span class="red">Remove</span> the last element.</p>
+        </div>
+        <div class="answer">
+            <pre>
+                let array = [11,22,33,44,55,66,77,88,99]
+
+                array.pop()
+                console.log(array);
+
+                <b>Output:</b> [11, 22, 33, 44, 55,66, 77, 88]
+              
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>array.unshift()</h2>
+            <p><span class="green">Insert</span> the element into first place.</p>
+        </div>
+        <div class="answer">
+            <pre>
+                let array = [11,22,33,44,55,66,77,88,99]
+
+                array.unshift(100)
+                console.log(array);
+
+                <b>Output:</b> [100, 11, 22, 33, 44, 55,66, 77, 88]
+              
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>array.shift()</h2>
+            <p><span class="red">Remove</span> the first element.</p>
+        </div>
+        <div class="answer">
+            <pre>
+                let array = [11,22,33,44,55,66,77,88,99]
+
+                array.shift()
+                console.log(array);
+
+                <b>Output:</b> [22, 33, 44, 55,66, 77, 88]
+              
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>array.indexOf()</h2>
+            <p>Gives the index of the element.</p>
+        </div>
+        <div class="answer">
+            <pre>
+                let array = [11,22,33,44,55,66,77,88,99]
+
+                console.log(array.indexOf(88));
+
+                <b>Output:</b> 7
+              
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <!-- <h2>array.indexOf()</h2> -->
+            <p>If the element is not present in the array then the index will be <b>-1</b>.</p>
+        </div>
+        <div class="answer">
+            <pre>
+                let array = [11,22,33,44,55,66,77,88,99]
+
+                console.log(array.indexOf(100));
+
+                <b>Output:</b> -1
+              
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>array.at()</h2>
+            <p>Gives the element on the basis of index.</p>
+        </div>
+        <div class="answer">
+            <pre>
+                let array = [11,22,33,44,55,66,77,88,99]
+
+                console.log(array.at(4));
+
+                <b>Output:</b> 55
+              
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>array.slice(start,end)</h2>
+            <p>It takes the index as parameter.</p>
+            <p>The first parameter is <span class="green">inclusive</span> and should be smaller than the second parameter.</p>
+            <p>The second parameter is <span class="red">exclusive</span> and should be greater than the first paramter.</p>
+        </div>
+        <div class="answer">
+            <pre>
+                let array = [11,22,33,44,55,66,77,88,99]
+
+                console.log(array.slice(2,5));
+
+                <b>Output:</b> [ 33, 44, 55 ]
+              
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <!-- <h2>array.slice(start,end)</h2> -->
+            <p>If we take only 1 parameter it will start from it and gives the output till end.</p>
+        </div>
+        <div class="answer">
+            <pre>
+                let array = [11,22,33,44,55,66,77,88,99]
+
+                console.log(array.slice(5));
+
+                <b>Output:</b> [ 66, 77, 88, 99 ]
+              
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>array.splice(position,<span class="red">remove</span>,<span class="green">add elements</span>)</h2>
+            <p>The <b>first parameter</b> is position where to add or remove.</p>
+            <p>The <b>second parameter</b> is how many elements should be removed.</p>
+            <p>The <b>third parameter</b> is elements to add.</p>
+        </div>
+        <div class="answer">
+            <pre>
+                let array = [11,22,33,44,55,66,77,88,99]
+
+                array.splice(3,1,"sparsh")
+                
+                console.log(array);
+
+                <b>Output:</b> [ 11, 22, 33, 'sparsh', 55, 66, 77, 88, 99 ]
+              
+            </pre>
+        </div>
+    </div>
+</body>
+</html>

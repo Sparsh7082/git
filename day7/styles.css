@@ -1,0 +1,26 @@
+.outter-nav{
+    padding: 0px;
+    margin:0px;
+}
+
+.nav1{
+    padding: 0px;
+    margin: 0px;
+    display: block;
+
+}
+
+.nav2{
+    padding: 0px;
+    margin: 0px;
+    display: block;
+}
+
+ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+li{
+    float: left;
+}

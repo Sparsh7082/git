@@ -1,0 +1,7 @@
+10 october 2024
+
+number traversal
+
+floor
+ceil
+

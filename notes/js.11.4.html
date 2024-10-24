@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.11.4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.11.3.html">
+            <button>Previous</button>
+        </a>
+        <h1>armstrong number in function</h1>
+        <a href="js.11.5.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="field">
+        <div class="code">
+<pre>
+<code>
+function armstrong(num){
+    let nod=0;
+    let temp=num;
+    let temp2=num;
+    let an=0;
+
+    // finding number of digits
+    while(temp>0){
+        temp=Math.floor(temp/10);
+        nod++;
+    }
+
+    while(temp2>0){
+    let ld=temp2%10;    //finding last digit
+    an=an+Math.pow(ld,nod);     //calculating armstrong number
+    temp2=Math.floor(temp2/10);     // updating temp2
+    }
+
+    // checking whether armstrong number or not
+    if(an==num){
+    return true; 
+    }
+    else{
+    return false;  
+    }
+}
+                
+let ans=armstrong(153);
+console.log(ans);
+</code>
+</pre>    
+        </div>
+        <div class="answer">
+            <input type="number" id="number">
+            <button onclick="armstrong()">go</button>
+            <p id="answer"></p>
+            <script>
+                function armstrong(){
+                    var num = document.getElementById("number").value;
+                    var nod=0;
+                    var temp=num;
+                    var temp2=num;
+                    var an=0;
+                    var ans="";
+
+                    // finding number of digits
+                    while(temp>0){
+                        temp=Math.floor(temp/10);
+                        nod++;
+                    }
+                
+                    while(temp2>0){
+                    var ld=temp2%10;    //finding last digit
+                    an=an+Math.pow(ld,nod);     //calculating armstrong number
+                    temp2=Math.floor(temp2/10);     // updating temp2
+                    }
+                
+                    // checking whether armstrong number or not
+                    if(an==num){
+                    ans=true; 
+                    }
+                    else{
+                    ans=false;  
+                    }
+                    document.getElementById("answer").innerHTML = ans;
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

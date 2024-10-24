@@ -1,0 +1,44 @@
+1 october 2024
+
+switch
+
+variable
+switch(variable){
+    case:
+    result;
+    break;
+}
+
+
+ternary
+statement? value if true : value of false;
+
+
+Loops
+
+entry control loop
+for loop and while loop
+
+for(initiate; statement; update){
+    result
+}
+
+
+
+initiate
+while(statement){
+    result
+    update
+}
+
+
+
+exit control loop
+do while loop
+
+initiate or value of i
+
+do{
+    result
+    update
+}while(statement/condition)

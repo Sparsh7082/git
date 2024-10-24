@@ -1,0 +1,5 @@
+15 october 2024
+
+functions
+
+in the function we just need to update the changes only one place

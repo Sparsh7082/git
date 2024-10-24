@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.8&10.1</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .explain{
+            /* text-align: center; */
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        .main{
+            display: flex;
+            justify-content: space-around;
+            margin: 10px;
+        }
+        .es5{
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 30vw;
+            text-align: center;
+            padding: 10px;
+        }
+        .es6{
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 30vw;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.8&10.1.html">
+            <button>Previous</button>
+        </a>
+        <h1>Functions</h1>
+        <a href="js.9.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="explain">
+        <ul>
+            <li>
+                <b>Do not Repeat Yourself (DRY) principle-</b> If the code gets repeat capture it into a function.
+            </li>
+            <li>
+                <b>Modular code-</b> Create a functionality and use it anywhere
+            </li>
+            <li>Changes made only at one place.</li>
+            <li>
+                <b>first class members-</b> Function can be stored in any variable.
+            </li>
+            <li>In javascript every function <b>return something.</b></li>
+        </ul>
+    </div>
+    <h1 style="text-align: center;">Category of Functions</h1>
+    <h2 style="text-align: center; color: blue;">es5 and es6</h2>
+    <div class="main">
+        <div class="es5">
+            <h2>ecma-script 5</h2>
+            <p>function statement</p>
+            <p>function expression</p>
+            <p>anonymous function</p>
+            <p>function with parameter</p>
+            <p>function with return keyword</p>
+        </div>
+        <div class="es6">
+            <h2>ecma-script 6</h2>
+            <p>fat arrow function</p>
+            <p>fat arrow with parameters</p>
+            <p>fat arrow with return</p>
+            <p>fat arrow with implicit return</p>
+        </div>
+    </div>
+    <div class="main">
+        <div class="es5">
+            <h2>Syntax</h2>
+            <h3 style="text-align: left;margin-bottom: 0px;color: blueviolet;">Defination-</h3>
+            <p style="text-align: left;margin-top: 0px;">function fname(){<br>}</p>
+            <h3 style="text-align: left;margin-bottom: 0px;color: blueviolet;">Function invoke</h3>
+            <p style="text-align: left;margin-top: 0px;">fname();</p>
+        </div>
+        <div class="es6">
+            <h2>Syntax</h2>
+            <p style="text-align: left;margin-top: 0px;">()=>{<br>}</p>
+        </div>
+    </div>
+    <div class="main">
+        <div class="es5">
+            <h2>Types</h2>
+            <h3 style="text-align: left;margin-bottom: 0px;color: blueviolet;">Function statement-</h3>
+            <p style="text-align: left;margin-top: 0px;">runs with function's name</p>
+            <p style="text-align: left;margin-top: 0px;">function ramram(){<br>console.log("ram ram")<br>}<br><br>ramram();</p>
+            <h3 style="text-align: left;margin-bottom: 0px;color: blueviolet;">Function expression-</h3>
+            <p style="text-align: left;margin-top: 0px;">store function statement in variable and now the variable has all the power of function</p>
+            <p style="text-align: left;margin-top: 0px;">let <span style="color: red;">fun</span> = function game(){<br>console.log("ludo")<br>}<br><br><span style="color: red;">fun</span>();</p>
+            <h3 style="text-align: left;margin-bottom: 0px;color: blueviolet;">Anonymous Function-</h3>
+            <p style="text-align: left;margin-top: 0px;">function does not have name</p>
+            <p style="text-align: left;margin-top: 0px;">let angel = function(){<br>console.log("I am angel priya")<br>}<br><br>angel();</p>
+            <h3 style="text-align: left;margin-bottom: 0px;color: blueviolet;">Function with parameters-</h3>
+            <p style="text-align: left;margin-top: 0px;">parameters and arguments</p>
+            <p style="text-align: left;margin-top: 0px;border-bottom: 1px dashed black;padding-bottom: 5px;">function details(<span style="color: red;">para1</span>,<span style="color: blue;">para2</span>,<span style="color: green;">para3</span>){<br>...kaam...<br>}<br><br>details(<span style="color: red;">argument1</span>,<span style="color: blue;">argument2</span>,<span style="color: green;">argument3</span>);</p>
+            <p style="text-align: left;margin-top: 0px;">
+                function details(<span style="color: red;">name</span>,<span style="color: blue;">age</span>,<span style="color: green;">salary</span>){<br>console.log(name,age,salary)<br>}<br><br>details(<span style="color: red;">"sparsh"</span>,<span style="color: blue;">24</span>,<span style="color: green;">5000</span>);
+            </p>
+            <h3 style="text-align: left;margin-bottom: 0px;color: blueviolet;">Function with return keyword-</h3>
+            <p style="text-align: left;margin-top: 0px;">every function returns something and no code after return will run (<i>like break keywork in loops</i>). The return keyword needs to be catched in a variable.</p>
+            <p style="text-align: left;margin-top: 0px;">function age(umar){<br>return umar;<br><span style="color: red;">console.log("nahi chalega")</span><br>}<br><br>let ans = age(24);<br><br>console.log(ans)</p>
+        </div>
+        <div class="es6">
+            <h2>Types</h2>
+            <h3 style="text-align: left;margin-bottom: 0px;color: blueviolet;">Fat arrow function-</h3>
+            <p style="text-align: left;margin-top: 0px;">runs with variable's name</p>
+            <p style="text-align: left;margin-top: 0px;">let fun=()=>{<br>console.log("hello sir")<br>}<br><br>fun();</p>
+            <h3 style="text-align: left;margin-bottom: 0px;color: blueviolet;">Fat arrow with parameter-</h3>
+            <p style="text-align: left;margin-top: 0px;">parameters and arguments</p>
+            <p style="text-align: left;margin-top: 0px;">let details=(<span style="color: red;">name</span>,<span style="color: blue;">age</span>,<span style="color: green;">salary</span>)=>{<br>console.log(name,age,salary)<br>}<br><br>details(<span style="color: red;">"sparsh"</span>,<span style="color: blue;">24</span>,<span style="color: green;">5000</span>)</p>
+            <h3 style="text-align: left;margin-bottom: 0px;color: blueviolet;">Fat arrow with return-</h3>
+            <p style="text-align: left;margin-top: 0px;">every function returns something</p>
+            <p style="text-align: left;margin-top: 0px;">let fun=(game)=>{<br>return game;<br><span style="color: red;">console.log("nahi chalega")</span><br>}<br><br>let ans=fun("ludo");<br>console.log(ans)</p>
+            <h3 style="text-align: left;margin-bottom: 0px;color: blueviolet;">Fat arrow with implicit return-</h3>
+            <p style="text-align: left;margin-top: 0px;">no need to write return keyword</p>
+            <p style="text-align: left;margin-top: 0px;">let number = (a,b)=>a+b;<br><br>let sum = number(10,20)<br>console.log(sum)</p>
+            <p>OR</p>
+            <p style="text-align: left;margin-top: 0px;">console.log(number(10,20))</p>
+            <ul>
+                <li>If their is only <b>one parameter</b> then don't use round () brackets.</li>
+                <li>If the function has only <b>one statement</b> then don't use curly {} brackets.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

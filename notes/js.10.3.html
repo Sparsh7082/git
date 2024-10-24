@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.10.3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.10.2.html">
+            <button>Previous</button>
+        </a>
+        <h1>Check prime</h1>
+        <a href="js.10.4.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="field">
+        <div class="code">
+            <pre>
+                <code>
+                    function checkprime(num){
+                        let nof=0;
+                        for(let div=2;div*div<=num;div++){
+                            if(num%div==0){
+                                nof++;
+                                break;
+                            }
+                        }
+                        if(nof>0){
+                            return "not prime"
+                        } else{
+                            return "prime"
+                        }
+                    }
+                    let rv = checkprime(11);
+                    console.log(rv)
+                </code>
+            </pre>
+        </div>
+        <div class="answer">
+            <input type="number" id="number">
+            <button onclick="checkprime()">go</button>
+            <p id="answer"></p>
+            <script>
+                function checkprime(){
+                    var num = document.getElementById("number").value;
+                    var nof = 0;
+                    for(var div=2;div*div<=num;div++){
+                        if(num%div==0){
+                            nof++;
+                            break;
+                        }
+                    }
+                    if(nof>0){
+                        var ans = "not prime"
+                    }
+                    else{
+                        var ans = "prime"
+                    }
+                    document.getElementById("answer").innerHTML = ans;
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

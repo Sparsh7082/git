@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.11.6</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .number{
+            text-align: center;
+            border-radius: 10px;
+            border: 2px solid black;
+            height: 20vh;
+            width: 20vw;
+            margin: auto;
+            margin-top: 20px;
+        }
+        input{
+            margin-top: 10px;
+        }
+        h4{
+            margin-bottom: 0px;
+        }
+        .main{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .types{
+            text-align: center;
+            border-radius: 10px;
+            border: 2px solid black;
+            /* height: 30vh; */
+            width: 20vw;
+            padding: 10px;
+        }
+        table {
+            margin: 0 auto;
+            width: 80%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.11.5.html">
+            <button>Previous</button>
+        </a>
+        <h1>Number System Conversion</h1>
+        <a href="js.11.7.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <h3 style="color: red;margin: auto;text-align: center;">Chatgpt</h3>
+    
+    <div class="number">
+        <h4>Enter decimal number</h4>
+        <input type="number" id="number">
+        <br>
+        <button onclick="convert()">Convert</button>
+    </div>
+    
+    <div class="main">
+        <div class="types">
+            <h2>Binary</h2>
+            <p id="binaryAnswer"></p>
+            <table id="binaryTable">
+                <tr>
+                    <th>Division</th>
+                    <th>Remainder</th>
+                </tr>
+            </table>
+        </div>
+        <div class="types">
+            <h2>Octal</h2>
+            <p id="octalAnswer"></p>
+            <table id="octalTable">
+                <tr>
+                    <th>Division</th>
+                    <th>Remainder</th>
+                </tr>
+            </table>
+        </div>
+        <div class="types">
+            <h2>Hexadecimal</h2>
+            <p id="hexAnswer"></p>
+            <table id="hexTable">
+                <tr>
+                    <th>Division</th>
+                    <th>Remainder</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function convert() {
+            var num = document.getElementById("number").value;
+            if(num === ""){
+                alert("Please enter a number");
+                return;
+            }
+            var decimalNumber = parseInt(num);
+
+            // Clear existing table rows
+            document.getElementById("binaryTable").innerHTML = "<tr><th>Division</th><th>Remainder</th></tr>";
+            document.getElementById("octalTable").innerHTML = "<tr><th>Division</th><th>Remainder</th></tr>";
+            document.getElementById("hexTable").innerHTML = "<tr><th>Division</th><th>Remainder</th></tr>";
+
+            // Binary conversion with calculation table
+            var binary = "";
+            var temp = decimalNumber;
+            while (temp > 0) {
+                var remainder = temp % 2;
+                binary = remainder + binary;
+                addRowToTable("binaryTable", temp + " ÷ 2 = " + Math.floor(temp / 2), remainder);
+                temp = Math.floor(temp / 2);
+            }
+            document.getElementById("binaryAnswer").innerHTML = "Answer: " + binary;
+
+            // Octal conversion with calculation table
+            var octal = "";
+            temp = decimalNumber;
+            while (temp > 0) {
+                remainder = temp % 8;
+                octal = remainder + octal;
+                addRowToTable("octalTable", temp + " ÷ 8 = " + Math.floor(temp / 8), remainder);
+                temp = Math.floor(temp / 8);
+            }
+            document.getElementById("octalAnswer").innerHTML = "Answer: " + octal;
+
+            // Hexadecimal conversion with calculation table
+            var hex = "";
+            var hexChars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
+            temp = decimalNumber;
+            while (temp > 0) {
+                remainder = temp % 16;
+                hex = hexChars[remainder] + hex;
+                addRowToTable("hexTable", temp + " ÷ 16 = " + Math.floor(temp / 16), hexChars[remainder]);
+                temp = Math.floor(temp / 16);
+            }
+            document.getElementById("hexAnswer").innerHTML = "Answer: " + hex;
+        }
+
+        // Function to add a row to the table with the division step and remainder
+        function addRowToTable(tableId, division, remainder) {
+            var table = document.getElementById(tableId);
+            var row = table.insertRow();
+            var divisionCell = row.insertCell(0);
+            var remainderCell = row.insertCell(1);
+            divisionCell.innerHTML = division;
+            remainderCell.innerHTML = remainder;
+        }
+    </script>
+    
+</body>
+</html>

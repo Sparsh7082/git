@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.10.2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.9.html">
+            <button>Previous</button>
+        </a>
+        <h1>Simple Interest</h1>
+        <a href="js.10.3.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="field">
+        <div class="code">
+            <pre>
+                <code>
+                    function Si(p,r,t){
+                        return p*r*t/100;
+                    }
+                    let amt = Si(1000,5,2);
+                    console.log(amt)
+                </code>
+            </pre>
+        </div>
+        <div class="answer">
+            <input type="number" id="principle">
+            <input type="number" id="rate">
+            <input type="number" id="time">
+            <button onclick="Si()">go</button>
+            <p id="answer"></p>
+            <script>
+                function Si(){
+                    var p = document.getElementById("principle").value;
+                    var r = document.getElementById("rate").value;
+                    var t = document.getElementById("time").value;
+                    var amount = p*r*t/100;
+                    document.getElementById("answer").innerHTML = amount;
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

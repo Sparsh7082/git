@@ -1,0 +1,20 @@
+padding for spacing in the content
+margin for spacing outside of element
+
+
+Level of elements
+
+inline required width and width not applied
+
+block full width width applied
+
+inline block applied both features
+
+
+display for changing the property
+
+
+class for grouping
+
+id for uniqueness
+

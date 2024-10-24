@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(77, 77, 216);
+}
+.form2{
+    background-color: white;
+    height: 450px;
+    width: 400px;
+    color: rgb(80, 79, 79);
+    border-radius: 20px;
+}
+.form2 h1{
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+}
+.gender{
+    background-color: rgb(160, 213, 253);
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    border-color: blue;
+}
+.gender button{
+    color: white;
+    background-color: blue;
+    border-radius: 50px;
+    border-color: rgb(119, 196, 255);
+}

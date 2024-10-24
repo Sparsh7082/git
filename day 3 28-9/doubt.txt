@@ -1,0 +1,4 @@
+hr not working
+
+border color not working
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.10.5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.10.4.html">
+            <button>Previous</button>
+        </a>
+        <h1>prime count</h1>
+        <a href="js.11.1.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="field">
+        <div class="code">
+            <pre>
+                <code>
+                    function primecount(start,end){
+                        let count=0;
+                        for(let num=start;num<=end;num++){
+                            if(num==1){
+                                continue;
+                            }
+                            let nof=0;
+                            for(let div=2;div*div<=num;div++){
+                                if(num%div==0){
+                                    nof++;
+                                    break;
+                                }
+                            }
+                            if(nof==0){
+                                count++;
+                            }
+                            
+                        }
+                        return count;
+                    }
+                    let ans=primecount(1,10);
+                    console.log(ans)
+                </code>
+            </pre>
+        </div>
+        <div class="answer">
+            <input type="number" id="start">
+            <input type="number" id="end">
+            <button onclick="primecount()">go</button>
+            <p id="answer"></p>
+            <script>
+                function primecount(){
+                    var start = parseInt(document.getElementById("start").value);
+                    var end = parseInt(document.getElementById("end").value);
+                    var count=0;
+                    for(var num=start;num<=end;num++){
+                        if(num==1){
+                            continue;
+                        }
+                        var nof=0;
+                        for(var div=2;div*div<=num;div++){
+                            if(num%div==0){
+                                nof++;
+                                break;
+                            }
+                        }
+                        if(nof==0){
+                            count++;
+                        }
+                    }
+                    document.getElementById("answer").innerHTML = count;
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

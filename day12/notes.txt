@@ -1,0 +1,9 @@
+11 october 2024\
+
+prime number
+
+approach 1- 1 - num
+
+approach 2- 2 - num-1
+
+approach 3- 2 - sq root break

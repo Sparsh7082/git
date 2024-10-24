@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.11.1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.10.5.html">
+            <button>Previous</button>
+        </a>
+        <h1>Prime in range</h1>
+        <a href="js.11.2.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="field">
+        <div class="code">
+<pre>
+<code>
+    function primeinrange(start,end){
+    
+        for(let num=start;num<=end;num++){
+        
+            if(num==1){
+                continue;
+            }
+        
+            let nof=0;
+        
+            for(let div=2;div*div<=num;div++){
+        
+                if(num%div==0){
+                    nof++;
+                    break;
+                }
+            }
+        
+            if(nof==0){
+                console.log(num);
+            }
+        }
+    }
+    
+    primeinrange(1,10);
+    
+</code>
+</pre>
+        </div>
+        
+        <div class="answer">
+            <input type="number" id="start">
+            <input type="number" id="end">
+            <button onclick="primeinrange()">go</button>
+            <br>
+            <p id="answer"></p>
+            <script>
+                function primeinrange(){
+                    var start = parseInt(document.getElementById("start").value);
+                    var end = parseInt(document.getElementById("end").value);
+                    var text = "";
+    
+                    for(var num=start;num<=end;num++){
+    
+                        if(num==1){
+                            continue;
+                        }
+    
+                        var nof=0;
+    
+                        for(var div=2;div*div<=num;div++){
+    
+                            if(num%div==0){
+                                nof++;
+                                break;
+                            }
+                        }
+    
+                        if(nof==0){
+                            text=text+num+"<br>";
+                        }
+                    }
+                    document.getElementById("answer").innerHTML = text;
+                }
+                
+                
+            </script>
+        </div>
+    </div>
+</body>
+</html>
