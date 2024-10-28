@@ -1,4 +1,4 @@
-let num=1530;
+let num=153;
 let temp=num;
 let temp2=num;
 let nod=0;

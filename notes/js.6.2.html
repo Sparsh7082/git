@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.6.2</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h2{
+            text-align: center;
+        }
+        .types{
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+        .modulus{
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 45%;
+        }
+        .divide{
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 45%;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.6.1.html">
+            <button>Previous</button>
+        </a>
+        <h1>Number Traversal</h1>
+        <a href="js.6.3.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <h2>Major Operators used</h2>
+    <div class="types">
+        <div class="modulus">
+            <h2>Modulus (%)</h2>
+            <ul>
+                <li class="red"><b>Peeche ki digit k liye</b></li>
+                <li>Gives remainder</li>
+                <li>
+                    <dl>
+                        <dt><b>Example</b></dt>
+                        <dd>let num = 786</dd>
+                        <dd>console.log(num%10)</dd>
+                        <dd><b>Output </b>6 <i class="blue">(remainder or last digit)</i></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <div class="divide">
+            <h2>Divide (/)</h2>
+            <ul>
+                <li class="red"><b>Aage ki digit k liye</b></li>
+                <li class="green"><b>number todna or number chhota karna</b></li>
+                <li>Gives quotient</li>
+                <li>
+                    <dl>
+                        <dt><b>Example</b></dt>
+                        <dd>let num = 786</dd>
+                        <dd>console.log(num/10)</dd>
+                        <dd><b>Output </b>78.6</dd>
+                        <dd><i class="blue">floor value = 78</i></dd>
+                        <dd><i class="blue">ceil value = 79</i></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>NOD</h2>
+            <pre>
+                let num = 5678;
+                let nod = 0;
+                while(num>0){
+                    num=Math.floor(num/10);
+                    nod++;
+                }
+                console.log(nod);
+            </pre>
+        </div>
+        <div class="answer">
+            <h2>Output</h2>
+            <pre id="ans1"></pre>
+            <script>
+                let num1 = 5678;
+                let nod1 = 0;
+                while(num1>0){
+                    num1=Math.floor(num1/10);
+                    nod1++;
+                }
+                nod1 = nod1 + "<br>";
+                document.getElementById("ans1").innerHTML = nod1;
+            </script>
+        </div>
+    </div>
+</body>
+</html>

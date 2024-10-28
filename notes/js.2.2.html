@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.2.2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.2.1.html">
+            <button>Previous</button>
+        </a>
+        <h1>Switch</h1>
+        <a href="js.2.3.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="explain">
+        <ul>
+            <li>Switch is a <b>case sensitive</b>.</li>
+            <li>Default case is not necessary but applying it is a good practice.</li>
+            <li>If default is not there there will be no output if the case is not match.</li>
+            <li>Must apply <b>break</b> after each case.</li>
+        </ul>
+    </div>
+    <div class="explain" style="padding-left: 20px;">
+        <h2>Syntax</h2>
+        <pre>
+            switch(statement-expression){
+            case "":
+                work
+            }
+        </pre>
+    </div>
+    <h2 style="text-align: center;">Example 1</h2>
+    <div class="field">
+        <div class="code">
+            <h2 style="text-align: center;">Without break</h2>
+            <pre>
+                let age = 18;
+
+                switch(age){
+                    case 15:
+                        console.log("i am 15");
+                    case 16:
+                        console.log("i am 16");
+                    case 17:
+                        console.log("i am 17");
+                    case 18:
+                        console.log("i am 18");
+                    case 19:
+                        console.log("i am 19");
+                    case "sparsh":
+                        console.log("i am sparsh");
+                    case 'A':
+                        console.log("i am char A");
+                    case "dice":
+                        console.log("i am dice");
+                    default:
+                        console.log("i am default");
+
+
+                }
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 style="text-align: center;">Output</h2>
+            <pre>
+                i am 18
+                i am 19
+                i am sparsh
+                i am char A
+                i am dice
+                i am default
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2 style="text-align: center;">With break</h2>
+            <pre>
+                let age = 18;
+
+                switch(age){
+                    case 15:
+                        console.log("i am 15");
+                        break;
+                    case 16:
+                        console.log("i am 16");
+                        break;
+                    case 17:
+                        console.log("i am 17");
+                        break;
+                    case 18:
+                        console.log("i am 18");
+                        break;
+                    case 19:
+                        console.log("i am 19");
+                        break;
+                    case "sparsh":
+                        console.log("i am sparsh");
+                        break;
+                    case 'A':
+                        console.log("i am char A");
+                        break;
+                    case "dice":
+                        console.log("i am dice");
+                        break;
+                    default:
+                        console.log("i am default");
+
+
+                }
+                console.log("I am out");
+
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 style="text-align: center;">Output</h2>
+            <pre>
+                i am 18
+                I am out
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2 style="text-align: center;">Default</h2>
+            <p style="text-align: center;">default is not necessary but applying it is a good practice.</p>
+            <pre>
+                let age = 150;
+
+                switch(age){
+                    case 15:
+                        console.log("i am 15");
+                        break;
+                    case 16:
+                        console.log("i am 16");
+                        break;
+                    case 17:
+                        console.log("i am 17");
+                        break;
+                    case 18:
+                        console.log("i am 18");
+                        break;
+                    case 19:
+                        console.log("i am 19");
+                        break;
+                    case "sparsh":
+                        console.log("i am sparsh");
+                        break;
+                    case 'A':
+                        console.log("i am char A");
+                        break;
+                    case "dice":
+                        console.log("i am dice");
+                        break;
+                    default:
+                        console.log("i am default");
+
+
+                }
+                console.log("I am out");
+
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 style="text-align: center;">Output</h2>
+            <pre>
+                i am default
+                I am out
+            </pre>
+        </div>
+    </div>
+    <h2 style="text-align: center;">Example 2</h2>
+    <div class="field">
+        <div class="code">
+            <h2 class="red" style="text-align: center;">Switch is a case sensitive</h2>
+            <pre>
+                let day = "<b class="red">Tuesday</b>";
+
+                switch(day){
+                    case "monday":
+                        console.log("its monday");
+                        break;
+                    case "<b class="red">tuesday</b>":
+                        console.log("its tuesday");
+                        break;
+                    case "wednesday":
+                        console.log("its wednesday");
+                        break;
+                    case "thursday":
+                        console.log("its thursday");
+                        break;
+                    case "friday":
+                        console.log("its friday");
+                        break;
+                    case "saturday":
+                        console.log("its saturday");
+                        break;
+                    case "sunday":
+                        console.log("its sunday");
+                        break;
+                    default:
+                        console.log("its dry day");       
+                }
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 style="text-align: center;">Output</h2>
+            <pre>
+                its dry day
+            </pre>
+        </div>
+    </div>
+</body>
+</html>

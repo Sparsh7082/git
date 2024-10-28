@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.4.1</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h2{
+            text-align: center;
+        }
+        .types{
+            display: flex;
+            justify-content: space-around;
+        }
+        .console{
+            border:2px solid black;
+            border-radius: 10px;
+            width: 30vw;
+        }
+
+        .process{
+            border:2px solid black;
+            border-radius: 10px;
+            width: 30vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.3.3.html">
+            <button>Previous</button>
+        </a>
+        <h1>Patterns</h1>
+        <a href="js.4.2.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="explain">
+        <ul>
+            <li>Do patterns for mastery on loops</li>
+        </ul>
+    </div>
+    <h2>To print an output</h2>
+    <div class="types">
+        <div class="console">
+            <h2>console.log("")</h2>
+            <ul>
+                <li>
+                    <dl>
+                        <dt>It prints an output and enter into a new line</dt>
+                        <dd><b>Example</b></dd>
+                        <dd>console.log("sparsh")</dd>
+                        <dd>console.log("gupta")</dd><br>
+                        <dd><b>Output</b></dd>
+                        <dd>sparsh</dd>
+                        <dd>gupta</dd>
+                    </dl>
+                </li>
+                <li>we can put <b>anything</b> in console.log() like number, function, etc.</li>
+            </ul>
+        </div>
+        <div class="process">
+            <h2>process.stdout.write("")</h2>
+            <ul>
+                <li>
+                    <dl>
+                        <dt>It prints an output and be there in the same line</dt>
+                        <dd><b>Example</b></dd>
+                        <dd>process.stdout.write("sparsh")</dd>
+                        <dd>process.stdout.write("gupta")</dd><br>
+                        <dd><b>Output</b></dd>
+                        <dd>sparshgupta</dd>
+                    </dl>
+                </li>
+                <li>we can put only <b>string value or sequence of character</b> in the process.stdout.write()</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

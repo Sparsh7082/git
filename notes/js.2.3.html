@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.2.3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.2.2.html">
+            <button>Previous</button>
+        </a>
+        <h1>Ternary</h1>
+        <a href="js.2.4.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="explain" style="padding-left: 20px;">
+        <h2>Syntax</h2>
+        <pre>
+            expression/statement ? <b class="green">if true</b> : <b class="red">if false</b>
+        </pre>
+    </div>
+    <h2 style="text-align: center;">Example 1</h2>
+    <div class="field">
+        <div class="code">
+            <pre>
+        let age = 20;
+        
+        age>20?console.log("go to college"):console.log("go to school");
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 style="text-align: center;">Output</h2>
+            <pre>
+                go to school
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <pre>
+        let age = 22;
+        
+        age>20?console.log("go to college"):console.log("go to school");
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 style="text-align: center;">Output</h2>
+            <pre>
+                go to college
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <pre>
+        let age = 22;
+        
+        true?console.log("go to college"):console.log("go to school");
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 style="text-align: center;">Output</h2>
+            <pre>
+                go to college
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <pre>
+        let age = 22;
+        
+        1?console.log("go to college"):console.log("go to school");
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 style="text-align: center;">Output</h2>
+            <pre>
+                go to college
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <pre>
+        let age = 22;
+        
+        "sparsh"?console.log("go to college"):console.log("go to school");
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 style="text-align: center;">Output</h2>
+            <pre>
+                go to college
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <pre>
+        let age = 22;
+        
+        null?console.log("go to college"):console.log("go to school");
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 style="text-align: center;">Output</h2>
+            <pre>
+                go to school
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <pre>
+        let age = 22;
+        
+        undefined?console.log("go to college"):console.log("go to school");
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 style="text-align: center;">Output</h2>
+            <pre>
+                go to school
+            </pre>
+        </div>
+    </div>
+</body>
+</html>

@@ -11,17 +11,36 @@
         .types{
             display: flex;
             justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .html{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 426px;
+        }
+        .css{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 426px;
+        }
+        .javascript{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 426px;
         }
         h2{
             border: 2px solid black;
             border-radius: 10px;
-            width: 20vw;
+            width: 400px;
             text-align: center;
         }
         .content{
             border: 2px solid black;
             border-radius: 10px;
-            width: 20vw;
+            width: 400px;
         }
         li{
             font-size: 20px;
@@ -31,50 +50,161 @@
 <body>
     <h1>Website</h1>
     <div class="types">
-        <a href=""><h2>HTML</h2></a>
-        <a href=""><h2>CSS</h2></a>
-        <a href="js.8&10.1.html"><h2>Javascript</h2></a>
-    </div>
-    <div class="types">
-        <div class="content">
-            <ul>
-                <li></li>
-        </ul>
-        </div>
-        <div class="content">
-            <ul>
-                <li></li>
+        <div class="html">
+            <a href="#"><h2>HTML</h2></a>
+            <div class="content">
+                <ul>
+                    <li></li>
             </ul>
+            </div>
         </div>
-        <div class="content">
-            <ul>
-                <li>
-                    <a href="js.8&10.1.html"><b>Functions</b></a>
-                    <ul>
-                        <li><a href="js.10.2.html">Simple Interest</a></li>
-                        <li><a href="js.10.3.html">Check Prime</a></li>
-                        <li><a href="js.10.4.html">Prime and not prime in range</a></li>
-                        <li><a href="js.10.5.html">prime count</a></li>
-                        <li><a href="js.11.1.html">prime in range</a></li>
-                        <li><a href="js.11.2.html">prime in range and sum</a></li>
-                        <li><a href="js.11.4.html">armstrong number in function</a></li>
-                    </ul>
-                </li>
-                <li><a href="js.11.3.html"><b>pre and post increment</b></a></li>
-                <li>
-                    <a href="js.11.5.html"><b>Number System</b></a>
-                    <ul>
-                        <li><a href="js.11.6.html">Number System Conversion</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="js.12.1.html"><b>Arrays</b></a>
-                    <ul>
-                        <li><a href="js.13.1.html">Array Methods / Functions</a></li>
-                        <li><a href="js.13.2.html">Array Traversal</a></li>
-                    </ul>
-                </li>
-            </ul>
+
+        <div class="css">
+            <a href="#"><h2>CSS</h2></a>
+            <div class="content">
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="javascript">
+            <a href="js.1.1.html"><h2>Javascript</h2></a>
+            <h3 style="margin: 0px;">Level 1</h3>
+            <p style="margin: 0px;">Problem solving aptitude</p>
+            <div class="content">
+                <ul>
+                    <li>
+                        <a href="js.1.1.html"><b>Intro</b></a>
+                    </li>
+                    <li>
+                        <a href="js.1.2.html"><b>5 things</b></a>
+                        <ul>
+                            <li>
+                                <a href="js.1.3.html">Output</a>
+                            </li>
+                            <li>
+                                <a href="js.1.4.html">Input or variables</a>
+                            </li>
+                            <li>
+                                <a href="js.2.1.html">Conditionals</a>
+                                <ul>
+                                    <li>
+                                        <a href="js.2.2.html">Switch</a>
+                                    </li>
+                                    <li>
+                                        <a href="js.2.3.html">Ternary</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="js.2.4.html">Loops</a>
+                                <ul>
+                                    <li>
+                                        <a href="js.2.5.html">For loop</a>
+                                    </li>
+                                    <li>
+                                        <a href="js.2.6.html">While loop</a>
+                                    </li>
+                                    <li>
+                                        <a href="js.2.7.html">Do while loop</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="js.8&10.1.html">Functions</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="js.1.5.html"><b>Operators</b></a>
+                    </li>
+                    <li>
+                        <a href="js.3.1.html"><b>Nested Loops</b></a>
+                    </li>
+                    <li>
+                        <a href="js.3.2.html"><b>Break and continue</b></a>
+                    </li>
+                    <li>
+                        <a href="js.3.3.html">Ques on loops, Conditionals, Break, continue</a>
+                    </li>
+                    <li>
+                        <a href="js.4.1.html"><b>Patterns</b></a>
+                        <ul>
+                            <li>
+                                <a href="js.4.2.html">Stars</a>
+                            </li>
+                            <li>
+                                <a href="js.4.3.html">Stars and spaces</a>
+                            </li>
+                            <li>
+                                <a href="js.5.1.html">Numbers</a>
+                            </li>
+                            <li>
+                                <a href="js.5.2.html">Matrix</a>
+                            </li>
+                            <li>
+                                <a href="js.6.1.html">Alpha-Numeric</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="js.6.2.html"><b>Number traversal</b></a>
+                        <ul>
+                            <li>
+                                <a href="js.6.3.html">Number reverse</a>
+                            </li>
+                            <li>
+                                <a href="js.6.4.html">Odd and even count</a>
+                            </li>
+                            <li>
+                                <a href="js.6.5.html">Number from front</a>
+                            </li>
+                            <li>
+                                <a href="js.7.1.html">Prime number and approach</a>
+                            </li>
+                            <li>
+                                <a href="js.7.2.html">Prime and not prime in range</a>
+                            </li>
+                            <li>
+                                <a href="js.7.3.html">Prime and not prime count</a>
+                            </li>
+                            <li>
+                                <a href="js.7.4.html">Armstrong Number</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="js.8&10.1.html"><b>Functions</b></a>
+                        <ul>
+                            <li><a href="js.9.html">Test</a></li>
+                            <li><a href="js.10.2.html">Simple Interest</a></li>
+                            <li><a href="js.10.3.html">Check Prime</a></li>
+                            <li><a href="js.10.4.html">Prime and not prime in range</a></li>
+                            <li><a href="js.10.5.html">prime count</a></li>
+                            <li><a href="js.11.1.html">prime in range</a></li>
+                            <li><a href="js.11.2.html">prime in range and sum</a></li>
+                            <li><a href="js.11.4.html">armstrong number in function</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="js.11.3.html"><b>pre and post increment</b></a></li>
+                    <li>
+                        <a href="js.11.5.html"><b>Number System</b></a>
+                        <ul>
+                            <li><a href="js.11.6.html">Number System Conversion</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="js.12.1.html"><b>Arrays</b></a>
+                        <ul>
+                            <li><a href="js.13.1.html">Array Methods / Functions</a></li>
+                            <li><a href="js.13.2.html">Array Traversal</a></li>
+                            <li><a href="js.13.3.html">Practice ques array and loops</a></li>
+                            <li><a href="js.12.2.html">Ques on array</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>

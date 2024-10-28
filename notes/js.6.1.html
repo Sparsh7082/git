@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.6.1</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h2{
+            text-align: center;
+        }
+        .types{
+            display: flex;
+            justify-content: space-around;
+        }
+        .ston{
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 45%;
+            margin-bottom: 10px;
+        }
+        .ntos{
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 45%;
+            margin-bottom: 10px;
+        }
+        .code{
+            width: 50%;
+        }
+        .answer{
+            width: 50%;
+        }
+        .f1{
+            padding: 10px;
+        }
+        .f2{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.5.2.html">
+            <button>Previous</button>
+        </a>
+        <h1>Alpha-numeric</h1>
+        <a href="js.6.2.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="explain">
+        <ul>
+            <li>System only understand binary code which is 0 & 1.</li>
+            <li>With the help of <b>ASCII code</b> system understand all other things.</li>
+            <li><b>ASCII code-</b> American Standard Code for Information Interchange.</li>
+            <li>
+                <b>Example- </b>
+                <ul>
+                    <li>65 for A</li>
+                    <li>97 for a</li>
+                    <li>32 for space</li>
+                </ul> 
+            </li>
+        </ul>
+        <div class="types">
+            <div class="ston">
+                <h2>String to number</h2>
+                <ul>
+                    <li>
+                        <dl>
+                            <dt><b>charCodeAt()</b> return the corresponding ascii code.</dt>
+                            <dd>
+                                <dl>
+                                    <dt><b>Example-</b></dt>
+                                    <dd>let name = "sparsh";</dd>
+                                    <dd>console.log(name.charCodeAt(2))</dd>
+                                    <dd><b>Output</b> 97</dd>
+                                </dl>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <div class="ntos">
+                <h2>Number to string</h2>
+                <ul>
+                    <li>
+                        <dl>
+                            <dt><b>String.fromCharCode()</b> converts the ascii code to string.</dt>
+                            <dd>
+                                <dl>
+                                    <dt><b>Example</b></dt>
+                                    <dd>let num=65;</dd>
+                                    <dd>console.log(String.fromCharCode(num));</dd>
+                                    <dd><b>Output</b> A</dd>
+                                </dl>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="field f1">
+        <div class="field f2">
+            <div class="code">
+                <h2>Q1-structure</h2>
+                <pre>
+
+for(let row=1;row<=5;row++){
+    let ans = "";
+    for(let star=1;star<=row;star++){
+        ans = ans + "*";
+    }
+    console.log(ans);   
+}
+                </pre>
+            </div>
+            <div class="answer">
+                <h2>Output</h2>
+                <pre id="ans1a"></pre>
+                <script>
+                    let ans1a = "";
+                    for(let row=1;row<=5;row++){
+                        for(let star=1;star<=row;star++){
+                            ans1a = ans1a + "*";
+                        }
+                        ans1a = ans1a + "<br>";
+                    }
+                    document.getElementById("ans1a").innerHTML = ans1a;
+                </script>
+            </div>
+        </div>
+        <div class="field f2">
+            <div class="code" style="width: 70%;">
+                <h2>Q1</h2>
+                <pre>
+
+for(let row=1;row<=5;row++){
+    let ans = "";
+    let val = 65;
+    for(let star=1;star<=row;star++){
+        ans = ans + (String.fromCharCode(val));
+        val++;
+    }
+    console.log(ans);   
+}
+                </pre>
+            </div>
+            <div class="answer">
+                <h2>Output</h2>
+                <pre id="ans1b"></pre>
+                <script>
+                    let ans1b = "";
+                    for(let row=1;row<=5;row++){
+                        let val = 65;
+                        for(let star=1;star<=row;star++){
+                            ans1b = ans1b + (String.fromCharCode(val));
+                            val++;
+                        }
+                        ans1b = ans1b + "<br>";   
+                    }
+                    document.getElementById("ans1b").innerHTML = ans1b;
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="field f1">
+        <div class="field f2">
+            <div class="code" style="width: 60%;">
+                <h2>Q2-structure</h2>
+                <pre>
+let nsp = 0;
+for(let row=1;row<=5;row++){
+    let ans = "";
+    //space
+    for(let space=1;space<=nsp;space++){
+        ans = ans + " ";
+    }
+    //star
+    for(let star=1;star<=5-row+1;star++){
+        ans = ans + "*";
+    }
+    //new line
+    console.log(ans);    
+    //update
+    nsp=nsp+1;
+}   
+                </pre>
+            </div>
+            <div class="answer">
+                <h2>Output</h2>
+                <pre id="ans2a"></pre>
+                <script>
+                    let ans2a = "";
+                    let nsp2a = 0;
+                    for(let row=1;row<=5;row++){
+
+                        //space
+                        for(let space=1;space<=nsp2a;space++){
+                            ans2a = ans2a + " ";
+                        }
+                        //star
+                        for(let star=1;star<=5-row+1;star++){
+                            ans2a = ans2a + "*";
+                        }
+                        //new line
+                        ans2a = ans2a + "<br>";    
+                        //update
+                        nsp2a=nsp2a+1;
+                    }
+                    document.getElementById("ans2a").innerHTML = ans2a;
+                </script>
+            </div>
+        </div>
+        <div class="field f2">
+            <div class="code" style="width: 70%;">
+                <h2>Q2</h2>
+                <pre>
+
+let nsp=0;
+let val=65;
+for(let row=1;row<=5;row++){
+    let ans='';
+    for(let space=1;space<=nsp;space++){
+        ans=ans+" "
+    }
+    for(let char=0;char<5-row+1;char++){
+        ans=ans+(String.fromCharCode(val+char));
+        
+    }
+    val++;
+    console.log(ans);
+    
+    nsp=nsp+1;
+    
+}
+
+                </pre>
+            </div>
+            <div class="answer">
+                <h2>Output</h2>
+                <pre id="ans2b"></pre>
+                <script>
+                    let ans2b='';
+                    let nsp2b=0;
+                    let val2b=65;
+                    for(let row=1;row<=5;row++){
+
+                        for(let space=1;space<=nsp2b;space++){
+                            ans2b=ans2b+" "
+                        }
+                        for(let char=0;char<5-row+1;char++){
+                            ans2b=ans2b+(String.fromCharCode(val2b+char));
+
+                        }
+                        val2b++;
+                        ans2b = ans2b + "<br>"
+
+                        nsp2b=nsp2b+1;
+
+                    }
+                    document.getElementById("ans2b").innerHTML = ans2b;
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -17,7 +17,13 @@ button{
     height: 20px;
     margin: 25px;
 }
-
+.explain{
+    /* text-align: center; */
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 0px 10px;
+}
 .field{
     display: flex;
     justify-content: space-evenly;
@@ -39,6 +45,10 @@ p{
     font-size: 20px;
 }
 
+pre{
+    font-size: 16px;
+}
+
 li{
     text-align: left;
     font-size: 20px;
@@ -50,4 +60,7 @@ li{
 
 .green{
     color: green;
+}
+.blue{
+    color: blue;
 }

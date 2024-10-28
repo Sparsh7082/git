@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.5.2</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h2{
+            text-align: center;
+        }
+        .code{
+            width: 50%;
+        }
+        .answer{
+            width: 50%;
+        }
+        .f1{
+            padding: 10px;
+        }
+        .f2{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.5.1.html">
+            <button>Previous</button>
+        </a>
+        <h1>Matrix</h1>
+        <a href="js.6.1.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="field f1">
+        <div class="field f2">
+            <div class="code">
+                <h2>Star and space</h2>
+            <pre>
+for(let row=1;row<=5;row++){
+    //star
+    for(let star=1;star<=5;star++){
+        process.stdout.write("*")
+    }
+    //new line
+    console.log();
+    
+}
+            </pre>
+            </div>
+            <div class="answer">
+                <h2>Output</h2>
+                <pre id="ans1a"></pre>
+                <script>
+                    let ans1a = "";
+                    for(let row=1;row<=5;row++){
+                        //star
+                        for(let star=1;star<=5;star++){
+                            ans1a = ans1a + "*";
+                        }
+                        //new line
+                        ans1a = ans1a + "<br>";
+
+                    }
+                    document.getElementById("ans1a").innerHTML = ans1a;
+                </script>
+            </div>
+        </div>
+        <div class="field f2">
+            <div class="code">
+                <h2>Matrix</h2>
+            <pre>
+
+for(let row=1;row<=5;row++){
+    for(let col=1;col<=5;col++){
+        process.stdout.write("*")
+    }
+    console.log();
+    
+}
+            </pre>
+            </div>
+            <div class="answer">
+                <h2>Output</h2>
+                <pre id="ans1b"></pre>
+                <script>
+                    let ans1b = "";
+                    
+                    for(let row=1;row<=5;row++){
+                        for(let col=1;col<=5;col++){
+                            ans1b = ans1b + "*";
+                        }
+                        ans1b = ans1b + "<br>";
+
+                    }
+                    document.getElementById("ans1b").innerHTML = ans1b;
+                </script>
+            </div>
+        </div>
+    </div>
+    ---------------------------------------
+    <div class="field f1">
+        <div class="field f2">
+            <div class="code" style="width: 60%;">
+                <h2>Star and space</h2>
+                <pre>
+let nsp = 0;
+for(let row=1;row<=5;row++){
+    //space
+    for(let space=1;space<=nsp;space++){
+        process.stdout.write(" ")
+    }
+    // 1 star
+    process.stdout.write("*")
+
+    //new line
+    console.log();
+    
+    //update space
+    nsp++;
+}
+                </pre>
+            </div>
+            <div class="answer">
+                <h2>Output</h2>
+                <pre id="ans2a"></pre>
+                <script>
+                    let ans2a = "";
+                    let nsp2a = 0;
+                    for(let row=1;row<=5;row++){
+                        //space
+                        for(let space=1;space<=nsp2a;space++){
+                            ans2a = ans2a + " ";
+                        }
+                        // 1 star
+                        ans2a = ans2a + "*";
+                    
+                        //new line
+                        ans2a = ans2a + "<br>";
+
+                        //update space
+                        nsp2a++;
+                    }
+                    document.getElementById("ans2a").innerHTML = ans2a;
+                </script>
+            </div>
+        </div>
+        <div class="field f2">
+            <div class="code">
+                <h2>Matrix</h2>
+                <pre>
+for(let row=1;row<=5;row++){
+    for(let col=1;col<=5;col++){
+        if(row==col){
+            process.stdout.write("*")
+        }
+        else{
+            process.stdout.write(" ")
+        }
+    }
+    console.log();
+    
+}
+                </pre>
+            </div>
+            <div class="answer">
+                <h2>Output</h2>
+                <pre id="ans2b"></pre>
+                <script>
+                    let ans2b = "";
+                    for(let row=1;row<=5;row++){
+                        for(let col=1;col<=5;col++){
+                            if(row==col){
+                                ans2b = ans2b + "*";
+                            }
+                            else{
+                                ans2b = ans2b + " ";
+                            }
+                        }
+                        ans2b = ans2b + "<br>";
+                    }
+                    document.getElementById("ans2b").innerHTML = ans2b;
+                </script>
+            </div>
+        </div>
+    </div>
+    ---------------------------------------
+    <div class="field f1">
+        <div class="field f2">
+            <div class="code" style="width: 60%;">
+                <h2>Star and space</h2>
+                <pre>
+let nsp = 4;
+for(let row=1;row<=5;row++){
+    //space
+    for(let space=1;space<=nsp;space++){
+        process.stdout.write(" ")
+    }
+    // 1 star
+    process.stdout.write("*")
+    //new line
+    console.log();
+    
+    //update space
+    nsp--;
+}
+                </pre>
+            </div>
+            <div class="answer">
+                <h2>Output</h2>
+                <pre id="ans3a"></pre>
+                <script>
+                    let ans3a = "";
+                    let nsp3a = 4;
+                    for(let row=1;row<=5;row++){
+                        //space
+                        for(let space=1;space<=nsp3a;space++){
+                            ans3a = ans3a + " ";
+                        }
+                        // 1 star
+                        ans3a = ans3a + "*";
+                        //new line
+                        ans3a = ans3a + "<br>";
+
+                        //update space
+                        nsp3a--;
+                    }
+                    document.getElementById("ans3a").innerHTML = ans3a;
+                </script>
+            </div>
+        </div>
+        <div class="field f2">
+            <div class="code">
+                <h2>Matrix</h2>
+                <pre>
+for(let row=1;row<=5;row++){
+    for(let col=1;col<=5;col++){
+        if(row+col==6){
+            process.stdout.write("*")
+        }
+        else{
+            process.stdout.write(" ")
+        }
+    }
+    console.log();
+}
+                </pre>
+            </div>
+            <div class="answer">
+                <h2>Output</h2>
+                <pre id="ans3b"></pre>
+                <script>
+                    let ans3b = "";
+                    
+                    for(let row=1;row<=5;row++){
+                        for(let col=1;col<=5;col++){
+                            if(row+col==6){
+                                ans3b = ans3b + "*";
+                            }
+                            else{
+                                ans3b = ans3b + " ";
+                            }
+                        }
+                        ans3b = ans3b + "<br>";
+                    }
+                    document.getElementById("ans3b").innerHTML = ans3b;
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>Q1</h2>
+            <pre>
+                for(let row=1;row<=5;row++){
+                    for(let col=1;col<=5;col++){
+                        if((row==col) || (row+col==6)){
+                            process.stdout.write("*")
+                        }
+                        else{
+                            process.stdout.write(" ")
+                        }
+                    }
+                    console.log();
+                }
+            </pre>
+        </div>
+        <div class="answer">
+            <h2>Output</h2>
+            <pre id="ans4"></pre>
+            <script>
+                let ans4 = "";
+                for(let row=1;row<=5;row++){
+                    for(let col=1;col<=5;col++){
+                        if(row==col || row+col==6){
+                            ans4 = ans4 + "*";
+                        }
+                        else{
+                            ans4 = ans4 + " ";
+                        }
+                    }
+                    ans4 = ans4 + "<br>";
+                }
+                document.getElementById("ans4").innerHTML = ans4;
+            </script>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>Q2</h2>
+            <pre>
+        for(let row=1;row<=5;row++){
+            for(let col=1;col<=5;col++){
+                if((row==col) || (row+col==6) || (col==1 || col==5)){
+                    process.stdout.write("*")
+                }
+                else{
+                    process.stdout.write(" ")
+                }
+            }
+            console.log();
+        }
+            </pre>
+        </div>
+        <div class="answer">
+            <h2>Output</h2>
+            <pre id="ans5"></pre>
+            <script>
+                let ans5 = "";
+                for(let row=1;row<=5;row++){
+                    for(let col=1;col<=5;col++){
+                        if((row==col) || (row+col==6) || (col==1 || col==5)){
+                            ans5 = ans5 + "*";
+                        }
+                        else{
+                            ans5 = ans5 + " ";
+                        }
+                    }
+                    ans5 = ans5 + "<br>";
+                }
+                document.getElementById("ans5").innerHTML = ans5;
+            </script>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>Swastik</h2>
+            <pre>
+                for(row=1;row<=7;row++){
+                    for(col=1;col<=7;col++){
+                        if(row==1){
+                            if(col==1 || col>3){
+                                process.stdout.write("* ")
+                            } else{
+                                process.stdout.write("  ")
+                            }
+                        }else if(row<4){
+                            if(col==1 || col==4){
+                                process.stdout.write("* ")
+                            } else{
+                                process.stdout.write("  ")
+                            }           
+                        }else if(row==4){
+                            process.stdout.write("* ")
+                        }else if(row<7){
+                            if(col==4 || col==7){
+                                process.stdout.write("* ")
+                            } else{
+                                process.stdout.write("  ")
+                            }
+                        }else{
+                            if(col==7 || col<5){
+                                process.stdout.write("* ")
+                            } else{
+                                process.stdout.write("  ")
+                            }
+                        }
+                    }
+                    console.log();
+                    
+                }
+            </pre>
+        </div>
+        <div class="answer">
+            <h2>Output</h2>
+            <pre id="ans6"></pre>
+            <script>
+                let ans6 = "";
+                for(row=1;row<=7;row++){
+                    for(col=1;col<=7;col++){
+                        if(row==1){
+                            if(col==1 || col>3){
+                                ans6 = ans6 + "* ";
+                            } else{
+                                ans6 = ans6 + "  ";
+                            }
+                        }else if(row<4){
+                            if(col==1 || col==4){
+                                ans6 = ans6 + "* ";
+                            } else{
+                                ans6 = ans6 + "  ";
+                            }           
+                        }else if(row==4){
+                            ans6 = ans6 + "* ";
+                        }else if(row<7){
+                            if(col==4 || col==7){
+                                ans6 = ans6 + "* ";
+                            } else{
+                                ans6 = ans6 + "  ";
+                            }
+                        }else{
+                            if(col==7 || col<5){
+                                ans6 = ans6 + "* ";
+                            } else{
+                                ans6 = ans6 + "  ";
+                            }
+                        }
+                    }
+                    ans6 = ans6 + "<br>";
+
+                }
+                document.getElementById("ans6").innerHTML=ans6;
+            </script>
+        </div>
+    </div>
+</body>
+</html>

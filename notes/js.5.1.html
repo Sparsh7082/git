@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.5.1</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h2{
+            text-align: center;
+        }
+        .code{
+            width: 50%;
+        }
+        .answer{
+            width: 50%;
+        }
+        .f1{
+            padding: 10px;
+        }
+        .f2{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.4.3.html">
+            <button>Previous</button>
+        </a>
+        <h1>Numbers</h1>
+        <a href="js.5.2.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="field f1">
+        <div class="field f2">
+            <div class="code">
+                <h2>Q1- structure</h2>
+                <pre>
+
+for(let row=1;row<=5;row++){
+    //stars
+    for(star=1;star<=row;star++){
+        process.stdout.write("*")
+    }
+    //new line
+    console.log();
+}
+                </pre>
+            </div>
+            <div class="answer">
+                <h2>Output</h2>
+                <pre id="ans1a"></pre>
+                <script>
+                    let ans1a = "";
+                    for(let row=1;row<=5;row++){
+                        //stars
+                        for(star=1;star<=row;star++){
+                            ans1a = ans1a + "*";
+                        }
+                        //new line
+                        ans1a = ans1a + "<br>";
+                    }
+                    document.getElementById("ans1a").innerHTML = ans1a;
+                </script>
+            </div>
+        </div>
+        <div class="field f2">
+            <div class="code">
+                <h2>Q1</h2>
+                <pre>
+for(let row=1;row<=5;row++){
+    let ans='';
+    //stars
+    for(star=1;star<=row;star++){
+        ans=ans+row;
+    }
+    //new line
+    console.log(ans);
+}
+                </pre>
+            </div>
+            <div class="answer">
+                <h2>Output</h2>
+                <pre id="ans1b"></pre>
+                <script>
+                    let ans1b = "";
+                    for(let row=1;row<=5;row++){
+                        //stars
+                        for(star=1;star<=row;star++){
+                            ans1b = ans1b +row;
+                        }
+                        //new line
+                        ans1b = ans1b + "<br>";
+                    }
+                    document.getElementById("ans1b").innerHTML = ans1b;
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="field f1">
+        <div class="field f2">
+            <div class="code" style="width: 60%;">
+                <h2>Q2-structure</h2>
+                <pre>
+let nsp = 0;
+let nst = 5;
+for(let row=1;row<=5;row++){
+    //kuch space chapne h
+    for(let space=1;space<=nsp;space++){
+        process.stdout.write(" ")
+    }
+    //kuch star chapne h
+    for(let star=1;star<=nst;star++){
+        process.stdout.write("*")
+    }
+    //new line me aana h
+    console.log();
+    //update
+    nsp=nsp+1;
+    nst=nst-1;
+}
+                </pre>
+            </div>
+            <div class="answer">
+                <h2>Output</h2>
+                <pre id="ans2a"></pre>
+                <script>
+                    let ans2a = "";
+                    let nsp2a = 0;
+                    let nst2a = 5;
+                    for(let row=1;row<=5;row++){
+                        //kuch space chapne h
+                        for(let space=1;space<=nsp2a;space++){
+                            ans2a = ans2a + " ";
+                        }
+                        //kuch star chapne h
+                        for(let star=1;star<=nst2a;star++){
+                            ans2a = ans2a + "*";
+                        }
+                        //new line me aana h
+                        ans2a = ans2a + "<br>";
+                        //update
+                        nsp2a=nsp2a+1;
+                        nst2a=nst2a-1;
+                    }
+                    document.getElementById("ans2a").innerHTML = ans2a;
+                </script>
+            </div>
+        </div>
+        <div class="field f2">
+            <div class="code" style="width: 60%;">
+                <h2>Q2</h2>
+                <pre>
+let nsp = 0;
+let nst = 5;
+let val = 5;
+for(let row=1;row<=5;row++){
+    let ans="";
+    //kuch space chapne h
+    for(let space=1;space<=nsp;space++){
+        ans=ans+" ";
+    }
+    //kuch star chapne h
+    for(let star=1;star<=nst;star++){
+        ans=ans+val;
+    }
+    //new line me aana h
+    console.log(ans);
+    //update
+    nsp=nsp+1;
+    nst=nst-1;
+    val--;
+}
+                </pre>
+            </div>
+            <div class="answer">
+                <h2>Output</h2>
+                <pre id="ans2b"></pre>
+                <script>
+                    let ans2b = "";
+                    let nsp2b = 0;
+                    let nst2b = 5;
+                    let val2b = 5;
+                    for(let row=1;row<=5;row++){
+                        //kuch space chapne h
+                        for(let space=1;space<=nsp2b;space++){
+                            ans2b=ans2b+" ";
+                        }
+                        //kuch star chapne h
+                        for(let star=1;star<=nst2b;star++){
+                            ans2b=ans2b+val2b;
+                        }
+                        //new line me aana h
+                        ans2b = ans2b + "<br>";
+                        //update
+                        nsp2b=nsp2b+1;
+                        nst2b=nst2b-1;
+                        val2b--;
+                    }
+                    document.getElementById("ans2b").innerHTML = ans2b;
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="field f1">
+        <div class="field f2">
+            <div class="code" style="width: 60%;">
+                <h2>Q3 Structure</h2>
+                <pre>
+
+let nsp=4;
+let nst=1;
+for(let row=1;row<=5;row++){
+    let ans = "";
+    //space
+    for(let space=1;space<=nsp;space++){
+        ans = ans + " "
+    }
+    //star
+    for(let star=1;star<=nst;star++){
+        ans = ans + "* "
+    }
+    //new line
+    console.log(ans);
+    
+    //update
+    if(row<3){
+        nsp=nsp-2;
+        nst=nst+2;
+    }
+    else{
+        nsp=nsp+2;
+        nst=nst-2;
+    }
+}
+
+                </pre>
+            </div>
+            <div class="answer">
+                <h2>Output</h2>
+                <pre id="ans3a"></pre>
+                <script>
+                    let ans3a = "";
+                    let nsp3a=4;
+                    let nst3a=1;
+                    for(let row=1;row<=5;row++){
+                        //space
+                        for(let space=1;space<=nsp3a;space++){
+                            ans3a = ans3a + " "
+                        }
+                        //star
+                        for(let star=1;star<=nst3a;star++){
+                            ans3a = ans3a + "* "
+                        }
+                        //new line
+                        ans3a = ans3a + "<br>"
+
+                        //update
+                        if(row<3){
+                            nsp3a=nsp3a-2;
+                            nst3a=nst3a+2;
+                        }
+                        else{
+                            nsp3a=nsp3a+2;
+                            nst3a=nst3a-2;
+                        }
+                    }
+                    document.getElementById("ans3a").innerHTML = ans3a;
+                </script>
+            </div>
+        </div>
+        <div class="field f2">
+            <div class="code" style="width: 60%;">
+                <h2>Q3</h2>
+                <pre>
+
+let nsp=4;
+let nst=1;
+let val=1;
+for(let row=1;row<=5;row++){
+    let ans = "";
+    //space
+    for(let space=1;space<=nsp;space++){
+        ans = ans + " "
+    }
+    //star
+    for(let star=1;star<=nst;star++){
+        if(row<4){
+            ans = ans + val + " ";    
+        }
+        else{
+            ans = ans + val;
+        }
+        val++;
+    }
+    //new line
+    console.log(ans);
+    
+    //update
+    if(row<3){
+        nsp=nsp-2;
+        nst=nst+2;
+    }
+    else if(row==3){
+        nsp=nsp+1;
+        nst=nst-2;
+    }
+    else{
+        nsp=nsp+2;
+        nst=nst-2;
+    }
+}
+                    
+                    
+                </pre>
+            </div>
+            <div class="answer">
+                <h2>Output</h2>
+                <pre id="ans3b"></pre>
+                <script>
+                    let ans3b="";
+                    let nsp3b=4;
+                    let nst3b=1;
+                    let val3b=1;
+                    for(let row=1;row<=5;row++){
+                        //space
+                        for(let space=1;space<=nsp3b;space++){
+                            ans3b = ans3b + " "
+                        }
+                        //star
+                        for(let star=1;star<=nst3b;star++){
+                            if(row<4){
+                                ans3b = ans3b + val3b + " ";    
+                            }
+                            else{
+                                ans3b = ans3b + val3b;
+                            }
+                            val3b++;
+                        }
+                        //new line
+                        ans3b = ans3b + "<br>";
+
+                        //update
+                        if(row<3){
+                            nsp3b=nsp3b-2;
+                            nst3b=nst3b+2;
+                        }
+                        else if(row==3){
+                            nsp3b=nsp3b+1;
+                            nst3b=nst3b-2;
+                        }
+                        else{
+                            nsp3b=nsp3b+2;
+                            nst3b=nst3b-2;
+                        }
+                    }
+                    document.getElementById("ans3b").innerHTML = ans3b;
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.3.1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.2.7.html">
+            <button>Previous</button>
+        </a>
+        <h1>Nested loops</h1>
+        <a href="js.3.2.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="explain">
+        <ul>
+            <li>Loop inside another loop.</li>
+        </ul>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>For and For nested loop</h2>
+            <pre>
+                for(let i=5;i<=10;i=i+1){
+                    //body
+                
+                    for(let j=1;j<=5;j=j+1){
+                        //body
+                
+                        console.log("sparsh",i,j);        
+                    }
+                }
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 style="text-align: center;">Output</h2>
+            <pre>
+                sparsh 5 1
+                sparsh 5 2
+                sparsh 5 3
+                sparsh 5 4
+                sparsh 5 5
+                sparsh 6 1
+                sparsh 6 2
+                sparsh 6 3
+                sparsh 6 4
+                sparsh 6 5
+                sparsh 7 1
+                sparsh 7 2
+                sparsh 7 3
+                sparsh 7 4
+                sparsh 7 5
+                sparsh 8 1
+                sparsh 8 2
+                sparsh 8 3
+                sparsh 8 4
+                sparsh 8 5
+                sparsh 9 1
+                sparsh 9 2
+                sparsh 9 3
+                sparsh 9 4
+                sparsh 9 5
+                sparsh 10 1
+                sparsh 10 2
+                sparsh 10 3
+                sparsh 10 4
+                sparsh 10 5
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>For and While nested loop</h2>
+            <pre>
+                for(let i=5;i<=10;i=i+1){
+    
+                    let j=2;
+                    while(j<=5){
+                        console.log("sparsh",i,j);
+                        j=j+1      
+                    }
+                }
+                
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 style="text-align: center;">Output</h2>
+            <pre>
+                sparsh 5 2
+                sparsh 5 3
+                sparsh 5 4
+                sparsh 5 5
+                sparsh 6 2
+                sparsh 6 3
+                sparsh 6 4
+                sparsh 6 5
+                sparsh 7 2
+                sparsh 7 3
+                sparsh 7 4
+                sparsh 7 5
+                sparsh 8 2
+                sparsh 8 3
+                sparsh 8 4
+                sparsh 8 5
+                sparsh 9 2
+                sparsh 9 3
+                sparsh 9 4
+                sparsh 9 5
+                sparsh 10 2
+                sparsh 10 3
+                sparsh 10 4
+                sparsh 10 5
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2>While and While nested loop</h2>
+            <pre>
+
+                let i=2;
+
+                while(i<=5){
+                    let j=3;
+                    while(j<=5){
+                        console.log("sparsh",i,j);
+                        j=j+1;
+                    }
+                    i=i+1;
+                }
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 style="text-align: center;">Output</h2>
+            <pre>
+                sparsh 2 3
+                sparsh 2 4
+                sparsh 2 5
+                sparsh 3 3
+                sparsh 3 4
+                sparsh 3 5
+                sparsh 4 3
+                sparsh 4 4
+                sparsh 4 5
+                sparsh 5 3
+                sparsh 5 4
+                sparsh 5 5
+            </pre>
+        </div>
+    </div>
+</body>
+</html>

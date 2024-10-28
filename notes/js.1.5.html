@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.1.5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.1.4.html">
+            <button>Previous</button>
+        </a>
+        <h1>Operators</h1>
+        <a href="js.2.1.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="explain" style="text-align: center;">
+        <h2><span class="red">2</span> <span class="green">+</span> <span class="red">2</span></h2>
+        <p>here<span class="red"> 2 is operand</span> and <span class="green">+ is operator</span></p>
+    </div>
+    <div class="explain">
+        <ol>
+            <li>
+                <dl>
+                    <dt><b>Arithmatic operator</b> (+,-,*,/,%,floor(),ceil())</dt>
+                    <dd>
+                        <dl>
+                            <dt><b>Addition (+)</b></dt>
+                            <dd>console.log(10+20);</dd>
+                            <dd><b>Output:</b> 30</dd>
+                            <br>
+                            <dt><b>Subtraction (-)</b></dt>
+                            <dd>console.log(10-20);</dd>
+                            <dd><b>Output:</b> -10</dd>
+                            <br>
+                            <dt><b>Multiplication (*)</b></dt>
+                            <dd>console.log(5*10);</dd>
+                            <dd><b>Output:</b> 50</dd>
+                            <br>
+                            <dt><b>Division (/)</b></dt>
+                            <dd>console.log(10/5);</dd>
+                            <dd><b>Output:</b> 2</dd>
+                            <br>
+                            <dt><b>Modulus (%)</b></dt>
+                            <dd>console.log(11%5);</dd>
+                            <dd><b>Output:</b> 1 (remainder)</dd>
+                            <br>
+                            <dt><b>Floor function (Math.floor())</b></dt>
+                            <dd>console.log(Math.floor(11/5)); (where math is a file and floor is a function)</dd>
+                            <dd><b>Output:</b> 2 (floor value of <span class="red">2</span>.2)</dd>
+                            <br>
+                            <dt><b>Ceil function (Math.ceil())</b></dt>
+                            <dd>console.log(Math.ceil(11/5)); (where math is a file and ceil is a function)</dd>
+                            <dd><b>Output:</b> 3 (ceil or next value of <span class="red">2.2</span>)</dd>
+                        </dl>
+                    </dd>
+                </dl>
+            </li>
+        </ol>
+    </div>
+    <div class="explain">
+        <ol start="2">
+            <li>
+                <dl>
+                    <dt><b>Relational operator</b> (<,>,<=,>=,==,!=)</dt>
+                    <dd>Ans- <span class="green">true</span> / <span class="red">false</span></dd>
+                    <dd>
+                        <dl>
+                            <dt><b>Greater than (>)</b></dt>
+                            <dd>console.log(10>5)</dd>
+                            <dd><b>Output: </b> true</dd>
+                            <br>
+                            <dt><b>Smaller than (<)</b></dt>
+                            <dd>console.log(10<20)</dd>
+                            <dd><b>Output: </b> true</dd>
+                            <br>
+                            <dt><b>Equal to (==)</b></dt>
+                            <dd>console.log(10==10)</dd>
+                            <dd><b>Output: </b> true</dd>
+                            <br>
+                            <dt><b>Not equal to (!=)</b></dt>
+                            <dd>console.log(10!=20)</dd>
+                            <dd><b>Output: </b> true</dd>
+                            <br>
+                            <dt><b>Greater than and equal to (>=)</b></dt>
+                            <dd>console.log(10>=20)</dd>
+                            <dd><b>Output: </b> false</dd>
+                            <br>
+                            <dt><b>Smaller than and equal to (<=)</b></dt>
+                            <dd>console.log(10<=20)</dd>
+                            <dd><b>Output: </b> true</dd>
+                            <br>
+                            <dd>console.log(10<=10)</dd>
+                            <dd><b>Output: </b> true</dd>
+                        </dl>
+                    </dd>
+                </dl>
+                
+            </li>
+        </ol>
+    </div>
+    <div class="explain">
+        <ol start="3">
+            <li>
+                <dl>
+                    <dt><b>Logical operator</b> (and, or, not)</dt>
+                    <dd>Ans- <span class="green">true</span> / <span class="red">false</span></dd>
+                    <dd><span class="green"><b>true- </b></span><b>non zero- </b>-10,-2,9,"sparsh"= truthy value</dd>
+                    <dd><span class="red"><b>false- </b></span><b>zero- </b>0</dd>
+                    <dd>
+                        <dl>
+                            <dt><b>and (&&)- </b>Multiplication</dt>
+                            <dd>console.log(<span class="green"><b>true</b></span> && <span class="green"><b>true</b></span>);</dd>
+                            <dd><b>Output: </b><span class="green">true</span></dd>
+                            <br>
+                            <dd>console.log(<span class="green"><b>true</b></span> && <span class="red"><b>false</b></span>);</dd>
+                            <dd><b>Output: </b><span class="red">false</span></dd>
+                            <br>
+                            <dd>console.log(<span class="red"><b>false</b></span> && <span class="green"><b>true</b></span>);</dd>
+                            <dd><b>Output: </b><span class="red">false</span></dd>
+                            <br>
+                            <dd>console.log(<span class="red"><b>false</b></span> && <span class="red"><b>false</b></span>);</dd>
+                            <dd><b>Output: </b><span class="red">false</span></dd>
+                            <br>
+                            <dd>console.log(0 && 1);</dd>
+                            <dd><b>Output: </b>0 (0*1=0 false)</dd>
+                            <br>
+                            <dd>console.log(1 && 1);</dd>
+                            <dd><b>Output: </b>1 (1*1=1 true)</dd>
+                            <br>
+                            <dt><b>or ( || )- </b>jodna or add</dt>
+                            <dd>console.log(<span class="green"><b>true</b></span> || <span class="green"><b>true</b></span>);</dd>
+                            <dd><b>Output: </b><span class="green">true</span> (1+1=2=non zero = true)</dd>
+                            <br>
+                            <dd>console.log(<span class="green"><b>true</b></span> || <span class="red"><b>false</b></span>);</dd>
+                            <dd><b>Output: </b><span class="green">true</span> (1+0=1=non zero = true)</dd>
+                            <br>
+                            <dd>console.log(<span class="red"><b>false</b></span> || <span class="green"><b>true</b></span>);</dd>
+                            <dd><b>Output: </b><span class="green">true</span> (0+1=1=non zero = true)</dd>
+                            <br>
+                            <dd>console.log(<span class="red"><b>false</b></span> || <span class="red"><b>false</b></span>);</dd>
+                            <dd><b>Output: </b><span class="red">false</span> (0+0=0=zero = false)</dd>
+                            <br>
+                            <dt><b>not (!)</b></dt>
+                            <dd>console.log(!<span class="green"><b>true</b></span>);</dd>
+                            <dd><b>Output: </b><span class="red">false</span></dd>
+                            <br>
+                            <dd>console.log(!<span class="red"><b>false</b></span>);</dd>
+                            <dd><b>Output: </b><span class="green">true</span></dd>
+                            <br>
+                            <dd>console.log(!10);</dd>
+                            <dd><b>Output: </b>false</dd>
+                            <br>
+                            <dd>console.log(!0);</dd>
+                            <dd><b>Output: </b>true</dd>
+                            <br>
+                            <dd>console.log(!-2);</dd>
+                            <dd><b>Output: </b>false</dd>
+                            <br>
+                            <dd>console.log(!"sparsh");</dd>
+                            <dd><b>Output: </b>false</dd>
+                            <br>
+                        </dl>
+                    </dd>
+                </dl>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>
