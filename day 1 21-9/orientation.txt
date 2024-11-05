@@ -1,0 +1,52 @@
+web applications- myntra amazon 
+
+website- wikipedia
+
+tools / web application / software- i love pdf
+
+syllabus
+
+Full stack web development- tools / web apps / software which runs on web / browser  / chrome
+
+1 front end - client / browser / ui which is visible
+
+vanilla frameweok - core - 
+- html
+- css
+- js
+
+companies need library / framework like
+react js - ui lib - facebook 
+
+
+2 back end - business logic
+- node js
+- express js
+
+database - 
+- sql
+
+- nosql
+    - mongo db
+
+devops ( development + operations ) - ecosystem - automate the software development life cycle
+
+    software development life cycle
+        developer - code - tester - test - fail - code -- developer -- bug free - tester - test - pass -- deployment team runs the code on server -- deploy -- server -- end user
+
+- kubernets and docker - real time the code
+
+deployment - aws - amazon web service - highest market share
+- google - gcp
+- microsoft - azure
+
+system design - (architecture to support the load on the website)
+ - lld (low level design)
+    oops 
+    design patterns 23
+    solid principles
+
+ - hld (high level design)
+    case studies
+
+DSA (data structure and algorithm) 
