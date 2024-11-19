@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js2.3.1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js2.2.3.html">
+            <button>Previous</button>
+        </a>
+        <h1>Promise</h1>
+        <a href="js2.3.1.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="explain">
+        <p class="center">It returns either resolve or reject</p>
+        <h3 class="center">Syntax</h3>
+        <p class="center">new Promise((<b class="green">resolve</b>,<b class="red">reject</b>)=>{})</p>
+        <p class="center">The promise needs <b>callback function</b> which further needs 2 parameters i.e., <b class="green">resolve</b> and <b class="red">reject</b>.</p>
+        <p class="center">If we want to <b class="green">resolve</b> then use <b>then</b>. <b>Then</b> can be used multiple times. It also takes <b>callback function</b></p>
+        <p class="center">If we want to <b class="red">reject</b> then use <b>catch</b>. <b>Catch</b> can be used only <b class="red">1 time</b>.  It also takes <b>callback function</b></p>
+        <p class="center">If we did not do any action like resolve or reject the state of the promise will become <b>pending</b>.</p>
+
+        <div class="field">
+            <div class="code">
+                <h3 class="center">Example 1</h3>
+                <pre>
+const promise1 = new Promise((resolve,reject)=>{
+    resolve(true);
+})
+promise1.then((all_ok)=>{
+    console.log(all_ok)
+})
+                </pre>
+            </div>
+            <div class="answer">
+                <h3 class="center">Output</h3>
+                <p>true</p>
+            </div>
+        </div>
+        <div class="field">
+            <div class="code">
+                <h3 class="center">Example 2</h3>
+                <pre>
+const promise1 = new Promise((resolve,reject)=>{
+    reject(false);
+})
+promise1.catch((err)=>{
+    console.log(err)
+})
+                </pre>
+            </div>
+            <div class="answer">
+                <h3 class="center">Output</h3>
+                <p>false</p>
+            </div>
+        </div>
+        <h2 class="center">then and catch chaining</h2>
+        <div class="field">
+            <div class="code">
+                <pre>
+const promise1 = new Promise((resolve,reject)=>{
+    <span class="green">resolve(true);</span>
+    <span class="green">resolve("true2");</span>
+    <span class="red">reject(false);</span>
+    <span class="red">reject("false2");</span>
+})
+promise1.<span class="green">then</span>((all_ok1)=>{
+    console.log(all_ok1)
+}).<span class="green">then</span>((all_ok2)=>{
+    console.log(all_ok2)
+}).<span class="red">catch</span>((err1)=>{
+    console.log(err1)
+}).<span class="red">catch</span>((err2)=>{
+    console.log(err2)
+})
+                </pre>
+            </div>
+            <div class="answer">
+                <pre>
+                    <h3>If run <b class="green">then</b></h3>
+<b>Output:</b> true     //for first then
+        undefined       //for second then
+                    <h3>If run <b class="red">catch</b></h3>
+<b>Output:</b> false        //because catch runs only 1 time
+                </pre>
+            </div>
+        </div>
+    </div>
+    <div class="explain">
+        <h2 class="center">Task to do</h2>
+        <ul>
+            <li><b>Task 1: </b>connect to dice server</li>
+            <li><b>Task 2: </b>explore the course</li>
+            <li><b>Task 3: </b>select the course</li>
+            <li><b>Task 4: </b>enroll into the class</li>
+        </ul>
+    </div>
+    <div class="field">
+        <div class="code">
+            <pre>
+function connectToDiceServer(){
+    console.log("connecting to dice server ...ting ting ting ....")
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            let connected =true;
+            if(connected==true){
+                resolve("connected to server")
+            }else{
+                reject("connection failed .. please try again error 4040")
+            }
+        }, 3000);
+    })
+}
+
+function courseExplore(){
+    setTimeout(() => {
+        console.log("exploring the courses .......")
+    }, 2000);
+    return new Promise((resolve ,reject)=>{
+        setTimeout(() => {
+            let courseFound=true;
+            if(courseFound==true){
+                console.log("course available")
+                resolve(["js","advance js","DSA","SYSTEM DESIGN"])
+            }else{
+                reject("no course available")
+            }
+        }, 3000);
+    })
+}
+
+function courseSelection(courseName){
+    console.log("selecting the course.....")
+    return new Promise((resolve , reject)=>{
+        setTimeout(() => {
+            if(courseName){
+                resolve(courseName)
+            }else{
+                reject("please select a valid course name")
+            }
+        }, 3000);
+    })
+}
+
+
+function classEnroll(courseName){
+    return new Promise((resolve , reject)=>{
+        console.log("enrolling into the class....")
+        setTimeout(() => {
+            let enrollmentsucess=<b class="red">false</b>;
+            if(enrollmentsucess==true){
+                resolve(courseName)
+            }else{
+                reject("enrollment is failed")
+            }
+        }, 3000);
+    })
+}
+
+
+
+
+connectToDiceServer()
+.then((connectStatus)=>{
+    console.log(connectStatus)
+    return courseExplore();
+})
+.then((courses)=>{
+    console.log("course found ",courses)
+    return courseSelection(courses[2]);
+})
+.then((selectedCourse)=>{
+    console.log("your seelcted course is -",selectedCourse)
+    return classEnroll(selectedCourse);
+})
+.then(()=>{
+    console.log("process done ")
+})
+.catch((err)=>{
+    console.log(err);    
+})
+            </pre>
+        </div>
+        <div class="answer">
+            <pre>
+connecting to dice server ...ting ting ting ....
+connected to server
+exploring the courses .......
+course available
+course found  [ 'js', 'advance js', 'DSA', 'SYSTEM DESIGN' ]
+selecting the course.....
+your seelcted course is - DSA
+enrolling into the class....
+<b class="red">enrollment is failed</b>
+            </pre>
+        </div>
+    </div>
+</body>
+</html>

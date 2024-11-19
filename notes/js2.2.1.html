@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js2.2.1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js2.1.2.html">
+            <button>Previous</button>
+        </a>
+        <h1>Async Js.</h1>
+        <a href="js2.2.2.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="explain">
+        <ul>
+            <li>The javascript is a <b>single threaded language</b> which means we can do <b class="red">one work at a time</b>. But with the help of <b class="blue">Async Javascript</b> we can do <b class="green"> mutiple work at a time</b>.</li>
+            <li>Full form of Async Js is <b>Asynchronous Javascript</b> and javascript is a <b>Synchronous language</b><i> (step by step)</i></li>
+            <li>
+                We can use the Async Js with the help of
+                <ul>
+                    <li>Callbacks</li>
+                    <li>Promises</li>
+                    <li>Async Await</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="explain">
+        <pre>
+            console.log("sparsh")
+            console.log("gupta")
+
+            for(let i=0;i<=10000;i++){      <span class="red">//this task takes a long time</span>
+                console.log("counting",i)
+            }
+
+            console.log("student")     <span class="green"> //mean while we want this task should run first because this task takes less time </span>
+            
+            Now we will use async js for this
+        </pre>
+    </div>
+</body>
+</html>

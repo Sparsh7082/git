@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15.4</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.15.3.html">
+            <button>Previous</button>
+        </a>
+        <h1>5 ways of deep copy</h1>
+        <a href="js2.1.1.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <h2>Rest and Spread operator (...)</h2>
+    <div class="explain">
+        <pre>
+            let obj1={
+                x:100,
+                y:200
+            }
+
+            let obj2={...obj1} <b><i>Using spread operator</i></b>
+        </pre>
+        <div class="field">
+            <div class="code">
+                <h3>Before</h3>
+                <pre>
+console.log("before -",obj1)
+console.log("before -",obj2)
+                </pre>
+            </div>
+            <div class="answer">
+                <h3>Output</h3>
+                <pre>
+before - {x: 100, y: 200}
+before - {x: 100, y: 200}
+                </pre>
+            </div>
+        </div>
+        <pre>
+            obj1.z=300;
+        </pre>
+        <div class="field">
+            <div class="code">
+                <h3>After</h3>
+                <pre>
+console.log("after -",obj1)
+console.log("after -",obj2)
+                </pre>
+            </div>
+            <div class="answer">
+                <h3>Output</h3>
+                <pre>
+before - {x: 100, y: 200, z:300}
+before - {x: 100, y: 200}
+                </pre>
+            </div>
+        </div>
+    </div>
+    <h2>Loop (for-in)</h2>
+    <div class="explain">
+        <pre>
+            let obj1 = {
+                x:100,
+                y:200
+            }
+            let obj2 = {};
+            
+            for(let key in obj1){
+                obj2[key]=obj1[key]
+            }
+        </pre>
+        <div class="field">
+            <div class="code">
+                <h3>Before</h3>
+                <pre>
+console.log("before -",obj1)
+console.log("before -",obj2)
+                </pre>
+            </div>
+            <div class="answer">
+                <h3>Output</h3>
+                <pre>
+before - {x: 100, y: 200}
+before - {x: 100, y: 200}
+                </pre>
+            </div>
+        </div>
+        <pre>
+            obj1.z=300;
+        </pre>
+        <div class="field">
+            <div class="code">
+                <h3>After</h3>
+                <pre>
+console.log("after -",obj1)
+console.log("after -",obj2)
+                </pre>
+            </div>
+            <div class="answer">
+                <h3>Output</h3>
+                <pre>
+before - {x: 100, y: 200, z:300}
+before - {x: 100, y: 200}
+                </pre>
+            </div>
+        </div>
+    </div>
+    <h2>Structure Cloning</h2>
+    <div class="explain">
+        <pre>
+            let obj1 = {
+                x:100,
+                y:200
+            }
+            let obj2 = structureClone(obj1)
+        </pre>
+        <div class="field">
+            <div class="code">
+                <h3>Before</h3>
+                <pre>
+console.log("before -",obj1)
+console.log("before -",obj2)
+                </pre>
+            </div>
+            <div class="answer">
+                <h3>Output</h3>
+                <pre>
+before - {x: 100, y: 200}
+before - {x: 100, y: 200}
+                </pre>
+            </div>
+        </div>
+        <pre>
+            obj1.z=300;
+        </pre>
+        <div class="field">
+            <div class="code">
+                <h3>After</h3>
+                <pre>
+console.log("after -",obj1)
+console.log("after -",obj2)
+                </pre>
+            </div>
+            <div class="answer">
+                <h3>Output</h3>
+                <pre>
+before - {x: 100, y: 200, z:300}
+before - {x: 100, y: 200}
+                </pre>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

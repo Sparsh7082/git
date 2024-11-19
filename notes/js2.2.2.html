@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js2.2.2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js2.2.1.html">
+            <button>Previous</button>
+        </a>
+        <h1>Settimeout and setinterval</h1>
+        <a href="js2.2.3.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="explain">
+        <h2 class="center">Set time out</h2>
+        <p class="center">After how many milisecond the function should run</p>
+        <h3 class="center">Syntax</h3>
+        <p class="center">setTimeout(<span class="blue">callback function or handler</span>,<span class="green">time (in miliseconds)</span>)</p>
+        <pre>
+            <h3>Example</h3>
+            setTimeout(<span class="blue">function(){
+                console.log("i am running")    
+            }</span>,<span class="green">2000</span>)                           // 2000 means 2 second
+
+            <span class="red">This code will run after 2 second</span>
+        </pre>
+    </div>
+    <div class="explain">
+        <h2 class="center">set Interval</h2>
+        <p class="center">After every interval the function will run</p>
+        <h3 class="center">Syntax</h3>
+        <p class="center">setTimeout(<span class="blue">callback function or handler</span>,<span class="green">time (in miliseconds)</span>)</p>
+        <pre>
+            <h3>Example</h3>
+            setTimeout(<span class="blue">function(){
+                console.log("i am running")    
+            }</span>,<span class="green">2000</span>)                           // 2000 means 2 second
+
+            <span class="red">This code will run after <b><u>every</u></b> 2 second</span>
+
+            clearInterval(id/rv)       // this will clear the interval with the help of id or return value
+        </pre>
+    </div>
+</body>
+</html>

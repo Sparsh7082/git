@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js2.1.2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js2.1.1.html">
+            <button>Previous</button>
+        </a>
+        <h1>Assignment</h1>
+        <a href="js2.2.1.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="field">
+        <div class="ques">
+            <h2 class="center">Q1</h2>
+            <p>Prime Number Check
+                Write a function is Prime(n) that checks whether a given number n is prime. Return true if the number is prime, otherwise return false.</p>
+        </div>
+        <div class="code">
+            <pre>
+function checkprime(num){
+    if(num==1){
+        return false
+    }
+    let nof = 0;
+    for(let div=2;div*div<=num;div++){
+        if(num%div==0){
+            nof++;
+            break;
+        }
+    }
+    if(nof>0){
+        return false
+    }
+    else{
+        return true
+    }
+}
+
+console.log(checkprime(4));
+            </pre>
+        </div>
+        <div class="answer">
+            <input type="number" id="num1">
+            <button onclick="checkprime()">go</button>
+            <p id="ans1"></p>
+            <script>
+                function checkprime(){
+                    let num = parseInt(document.getElementById("num1").value);
+                    let ans = "";
+                    if(num==1){
+                        ans = false
+                    }
+                    else{
+                        let nof = 0;
+                        for(let div=2;div*div<=num;div++){
+                            if(num%div==0){
+                                nof++;
+                                break;
+                            }
+                        }
+                        if(nof>0){
+                            ans = false
+                        }
+                        else{
+                            ans = true
+                        }
+                    }
+                    document.getElementById("ans1").innerHTML = ans
+                }
+            </script>
+        </div>
+    </div>
+    <div class="field">
+        <div class="ques">
+            <h2 class="center">Q2</h2>
+            <p>Fibonacci Sequence
+                Write a function fibonacci(n) that returns the first n numbers in the Fibonacci sequence.
+                Example:
+                fibonacci(5) should return [0, 1, 1, 2, 3]</p>
+        </div>
+        <div class="code">
+            <pre>
+function fibonacci(num){
+    let arr = [];
+    let fd = 0;
+    let sd = 1;
+    if(num==1){
+        arr.push(fd);
+    }
+    else if(num==2){
+        arr.push(fd,sd);
+    }
+    else{
+        arr.push(fd,sd);
+        for(let i=1;i<=num-2;i++){
+            let dig = fd + sd;
+            arr.push(dig);
+            fd = sd;
+            sd = dig
+        }
+    }
+    return arr;
+}
+console.log(fibonacci(2));                
+            </pre>
+        </div>
+        <div class="answer">
+            <input type="number" id="num2">
+            <button onclick="fibonacci()">go</button>
+            <p id="ans2"></p>
+            <script>
+                function fibonacci(){
+                    let num = parseInt(document.getElementById("num2").value);
+                    let arr = [];
+                    let fd = 0;
+                    let sd = 1;
+                    if(num==1){
+                        arr.push(fd);
+                    }
+                    else if(num==2){
+                        arr.push(fd,sd);
+                    }
+                    else{
+                        arr.push(fd,sd);
+                        for(let i=1;i<=num-2;i++){
+                            let dig = fd + sd;
+                            arr.push(dig);
+                            fd = sd;
+                            sd = dig
+                        }
+                    }
+                    document.getElementById("ans2").innerHTML = arr;
+                }
+            </script>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">According to Sir</h2>
+            <pre>
+function fibonacci(num){
+    let arr = [];
+    let fd = 0;
+    let sd = 1;
+    for(let i=1;i<=num;i++){
+        let dig = fd + sd;
+        arr.push(fd);
+        fd = sd;
+        sd = dig
+    }
+    return arr;
+}
+console.log(fibonacci(2));
+            </pre>
+        </div>
+        <div class="answer">
+            <input type="number" id="num2.2">
+            <button onclick="fibonacci2()">go</button>
+            <p id="ans2.2"></p>
+            <script>
+                function fibonacci2(){
+                    let num = parseInt(document.getElementById("num2.2").value);
+                    let arr = [];
+                    let fd = 0;
+                    let sd = 1;
+                    for(let i=1;i<=num;i++){
+                        let dig = fd + sd;
+                        arr.push(fd);
+                        fd = sd;
+                        sd = dig
+                    }
+                    document.getElementById("ans2.2").innerHTML = arr;
+                }
+            </script>
+        </div>
+    </div>
+    <div class="field">
+        <div class="ques">
+            <h2 class="center">Q3</h2>
+            <p>Factorial Calculation
+                Write a function factorial(n) that returns the factorial of a given number n.
+                Example:
+                factorial(5) should return 120
+                factorial(0) should return 1</p>
+        </div>
+        <div class="code">
+            <pre>
+function factorial(num){
+    if(num==0){
+        return 1
+    }
+    else{
+        let dig = 1;
+        for(let i=1;i<=num;i++){
+            dig = dig * i;
+        }
+        return dig
+    }   
+}
+
+console.log(factorial(5));  
+            </pre>
+        </div>
+        <div class="answer">
+            <input type="number" id="num3">
+            <button onclick="factorial()">go</button>
+            <p id="ans3"></p>
+            <script>
+                function factorial(){
+                    let num = parseInt(document.getElementById("num3").value);
+                    let ans = "";
+                    if(num==0){
+                        ans = 1;
+                    }
+                    else{
+                        let dig = 1;
+                        for(let i=1;i<=num;i++){
+                            dig = dig * i;
+                        }
+                        ans = dig
+                    }
+                    document.getElementById("ans3").innerHTML = ans;   
+                }
+            </script>
+        </div>
+    </div>
+    <div class="field">
+        <div class="ques">
+            <h2 class="center">Q4</h2>
+            <p>Reverse a Number- 
+                Write a function reverseNumber(n) that takes a number n and returns the number with its digits reversed.</p>
+                <p>Example:</p>
+                <p>reverseNumber(12345) should return 54321</p>
+                <p> reverseNumber(987) should return 789</p>
+        </div>
+        <div class="code">
+            <pre>
+function reverseNumber(num){
+    let rn = 0;
+    while(num>0){
+        rn = rn*10 + num%10;
+        num = Math.floor(num/10)
+    }
+    return rn
+}
+
+console.log(reverseNumber(12345));
+            </pre>
+        </div>
+        <div class="answer">
+            <input type="number" id="num4">
+            <button onclick="reverseNumber()">go</button>
+            <p id="ans4"></p>
+            <script>
+                function reverseNumber(){
+                    let num = parseInt(document.getElementById("num4").value)
+                    let rn = 0;
+                    while(num>0){
+                        rn = rn*10 + num%10;
+                        num = Math.floor(num/10)
+                    }
+                    document.getElementById("ans4").innerHTML = rn;
+                }
+            </script>
+        </div>
+    </div>
+    <div class="field">
+        <div class="ques">
+            <h2 class="center">Q5</h2>
+            <p>Sum of Even Numbers
+                Write a function sumEvenNumbers(n) that returns the sum of all even numbers from 1 to n (inclusive).</p>
+                <p>Example:</p>
+                <p>sumEven Numbers (10) should return 30 (because 2 + 4+6+8+10 = 30)
+            </p>
+        </div>
+        <div class="code">
+            <pre>
+function sumEvenNumber(num){
+    let dig = 0;
+    for(let i=1;i<=num;i++){
+        if(i%2==0){
+            dig = dig + i
+        }
+    }
+    return dig
+}
+
+console.log(sumEvenNumber(10));
+            </pre>
+        </div>
+        <div class="answer">
+            <input type="number" id="num5">
+            <button onclick="sumEvenNumber()">go</button>
+            <p id="ans5"></p>
+            <script>
+                function sumEvenNumber(){
+                    let num = parseInt(document.getElementById("num5").value);
+                    let dig = 0;
+                    for(let i=1;i<=num;i++){
+                        if(i%2==0){
+                            dig = dig + i
+                        }
+                    }
+                    document.getElementById("ans5").innerHTML = dig;
+                }
+            </script>
+        </div>
+    </div>
+    <div class="field">
+        <div class="ques">
+            <h2 class="center">Q6</h2>
+            <p>
+                Right-Angled Triangle Pattern
+Write a function print Triangle(n) that prints a right-angled triangle pattern of stars (*) with n rows.</p>
+<p>Example for n = 4:</p>
+<pre>
+*
+**
+***
+****
+</pre>
+
+            </p>
+        </div>
+        <div class="code">
+            <pre>
+function printTriangle(num){
+    for(let row=1;row<=num;row++){
+        for(let star=1;star<=row;star++){
+            process.stdout.write("*")
+        }
+        console.log();
+    }
+}
+
+printTriangle(4)
+            </pre>
+        </div>
+        <div class="answer">
+            <input type="number" id="num6">
+            <button onclick="printTriangle()">go</button>
+            <p id="ans6"></p>
+            <script>
+                function printTriangle(){
+                    let num = parseInt(document.getElementById("num6").value);
+                    let ans = ""
+                    for(let row=1;row<=num;row++){
+                        for(let star=1;star<=row;star++){
+                            ans = ans + "*"
+                        }
+                        ans = ans + "<br>"
+                    }
+                    document.getElementById("ans6").innerHTML = ans;
+                }
+            </script>
+        </div>
+    </div>
+    <div class="field">
+        <div class="ques">
+            <h2 class="center">Q7</h2>
+            <p>
+                Inverted Right-Angled Triangle Pattern
+Write a function printInverted Triangle(n) that prints an inverted right-angled triangle pattern of stars (*) with n rows.</p>
+<p>Example for n = 4:</p>
+<pre>
+****
+***
+**
+*
+</pre>
+        </div>
+        <div class="code">
+            <pre>
+function printInvertedTriangle(num){
+    for(let row=1;row<=num;row++){
+
+        //kuch stars chapne h
+        for(let star=1;star<=num-row+1;star++){
+            process.stdout.write("*")
+        }
+        //new line me aana h
+        console.log();
+    }
+}
+
+printInvertedTriangle(4)
+            </pre>
+        </div>
+        <div class="answer">
+            <input type="number" id="num7">
+            <button onclick="printInvertedTriangle()">go</button>
+            <p id="ans7"></p>
+            <script>
+                function printInvertedTriangle(){
+                    let num = parseInt(document.getElementById("num7").value);
+                    let ans = "";
+                    for(let row=1;row<=num;row++){
+                    
+                        //kuch stars chapne h
+                        for(let star=1;star<=num-row+1;star++){
+                            ans = ans + "*";
+                        }
+                        //new line me aana h
+                        ans = ans + "<br>";
+                    }
+                    document.getElementById("ans7").innerHTML = ans;
+                }
+            </script>
+        </div>
+    </div>
+    <div class="field">
+        <div class="ques">
+            <h2 class="center">Q8</h2>
+            <p>
+                Pyramid Pattern of Numbers
+Write a function printNumberPyramid(n) that prints a pyramid pattern using numbers.</p>
+<p>Example for n = 5:</p>
+<pre>
+    1
+   121
+  12321
+ 1234321
+123454321
+</pre>
+        </div>
+        <div class="code">
+            <pre>
+function printNumberPyramid(num){
+    let nsp = num-1;
+    for(let row=1;row<=num;row++){
+        let ans = '';
+        for(let sp=1;sp<=nsp;sp++){
+            ans = ans + " "
+        }
+        let val = 1;
+        for(let ss=1;ss<=row;ss++){
+            ans = ans + val;
+            val++;
+        }
+        val--;
+        for(let ls=1;ls<=row-1;ls++){
+            val--;
+            ans = ans + val;
+        }
+        console.log(ans);
+        nsp=nsp-1
+    }
+}
+printNumberPyramid(5)
+            </pre>
+        </div>
+        <div class="answer">
+            <input type="number" id="num8">
+            <button onclick="printNumberPyramid()">go</button>
+            <p id="ans8"></p>
+            <script>
+                function printNumberPyramid(){
+                    let num = parseInt(document.getElementById("num8").value);
+                    let answer = "";
+                    let nsp = num-1;
+                    for(let row=1;row<=num;row++){
+                        let ans = "";
+                        for(let sp=1;sp<=nsp;sp++){
+                            ans = ans + "&nbsp;"
+                        }
+                        let val = 1;
+                        for(let ss=1;ss<=row;ss++){
+                            ans = ans + val;
+                            val++;
+                        }
+                        val--;
+                        for(let ls=1;ls<=row-1;ls++){
+                            val--;
+                            ans = ans + val;
+                        }
+                        ans = ans + "<br>";
+                        nsp=nsp-1
+                        answer = answer  + ans
+                    }
+                    document.getElementById("ans8").innerHTML = answer;
+                }
+            </script>
+        </div>
+    </div>
+    <div class="field">
+        <div class="ques">
+            <h2 class="center">Q9</h2>
+            <p>Diamond Pattern of Stars
+                Write a function printDiamond(n) that prints a diamond pattern of stars (*).</p>
+                <p>Example for n = 5:</p>
+                <pre>
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+                </pre>
+        </div>
+        <div class="code">
+            <pre>
+function printDiamond(num){
+    let nsp = Math.floor(num/2);
+    let nst = 1;
+    for(let row=1;row<=num;row++){
+        for(let sp=1;sp<=nsp;sp++){
+            process.stdout.write(" ")
+        }
+        for(let star=1;star<=nst;star++){
+            process.stdout.write("*")
+        }
+        console.log();
+        if(row &lt; Math.ceil(num/2)){
+            nsp = nsp-1;
+            nst = nst+2
+        }
+        else{
+            nsp = nsp+1;
+            nst = nst-2
+        }
+        
+    }
+}
+
+printDiamond(7)
+            </pre>
+        </div>
+        <div class="answer">
+            <input type="number" id="num9">
+            <button onclick="printDiamond()">go</button>
+            <p id="ans9"></p>
+            <script>
+                function printDiamond(){
+                    let num = parseInt(document.getElementById("num9").value);
+                    let ans = "";
+                    let nsp = Math.floor(num/2);
+                    let nst = 1;
+                    for(let row=1;row<=num;row++){
+                        for(let sp=1;sp<=nsp;sp++){
+                            ans = ans + "&nbsp;"
+                        }
+                        for(let star=1;star<=nst;star++){
+                            ans = ans + "*"
+                        }
+                        ans = ans + "<br>";
+                        if(row<Math.ceil(num/2)){
+                            nsp = nsp-1;
+                            nst = nst+2
+                        }
+                        else{
+                            nsp = nsp+1;
+                            nst = nst-2
+                        }
+                    }
+                    document.getElementById("ans9").innerHTML = ans;
+                }
+            </script>
+        </div>
+    </div>
+    <div class="field">
+        <div class="ques">
+            <h2 class="center">Q10</h2>
+            <p>Merge Two Objects
+                Write a function mergeObjects(obj1, obj2) that merges two objects. If there are overlapping keys, the values from the second object should overwrite the values from the first object.</p>
+                <p>Example:</p>
+                <p>const obj1 = { name: "Alice", age: 25};</p>
+                <p>const obj2 = { age: 30, city: "New York" };</p>
+                <p>mergeObjects(obj1, obj2);</p>
+                <p>// Expected output: { name: "Alice", age: 30, city: "New
+                York"}</p>
+        </div>
+        <div class="code">
+            <pre>
+function mergeObjects(object1,object2){
+    return {...object1,...object2}
+}
+let obj1 = {
+    name:"Alice",
+    age:25
+}
+
+let obj2 = {
+    age:30,
+    city:"New York"
+}
+
+let rv = mergeObjects(obj1,obj2)
+console.log(rv);                
+            </pre>
+        </div>
+        <div class="answer">
+            <pre>
+{ name: 'Alice', age: 30, city: 'New York' }
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="ques">
+            <h2 class="center">Q11</h2>
+            <p>Shallow Copy of an Object
+                Write a function shallowCopy(obj) that performs a shallow copy of an object. Modifying the new object should not affect the original.</p>
+                <p>Example:</p>
+                <p>const original = {a: 1, b: 2 };</p>
+                <p>const copy = shallow Copy(original);</p>
+                <p>copy.a = 3;</p>
+                <p>console.log(original.a); // Expected output: 1</p>
+                <p>console.log(copy.a); // Expected output: 3</p>
+        </div>
+        <div class="code">
+            <pre>
+// this is the example of deep c
+function shallowcopy(original,copy){
+    return {original, copy}
+}
+let original = {
+    a:1,
+    b:2
+}
+let copy = {...original}
+copy.a = 3
+
+let rv = shallowcopy(original,copy)
+console.log(rv);                
+            </pre>
+        </div>
+        <div class="answer">
+            <pre>
+{ original: { a: 1, b: 2 }, copy: { a: 3, b: 2 } }
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="ques">
+            <h2 class="center">Q12</h2>
+            <p>Remove Duplicates from Array Write a function removeDuplicates(arr) that removes duplicate elements from an array.
+            <p>Example:</p>
+            <p>removeDuplicates ([1, 2, 3, 1, 2, 4]);</p>
+            <p>// Expected output: [1, 2, 3, 4]</p>
+        </div>
+        <div class="code">
+            <pre>
+function removeDuplicates(array){
+    for(let i=0;i &lt; array.length;i++){
+        for(let j=i+1;j &lt; array.length;j++){
+            if(array[i]==array[j]){
+                array.splice(j,1)
+            }
+        }
+    }
+    return array
+    
+}
+let array = [1,2,3,1,2,4]
+let rv = removeDuplicates(array)
+console.log(rv);
+                
+            </pre>
+        </div>
+        <div class="answer">
+            <pre>
+[ 1, 2, 3, 4 ]
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="ques">
+            <h2 class="center">Q13</h2>
+            <p>Find Largest Element in an Array Write a function find Largest (arr) that finds and returns the largest number in an array.</p>
+            <p>Example:</p>
+            <p>findLargest([3, 5, 1, 8, 2]);</p>
+            <p>// Expected output: 8</p>
+        </div>
+        <div class="code">
+            <pre>
+function findLargest(array){
+    let max = 0;
+    for(let i=0; i &lt; array.length;i++){
+        if(max &lt; array[i]){
+            max=array[i]
+        }
+    }
+    return max;
+}
+
+let rv = findLargest([3,5,1,8,2])
+console.log(rv);
+            </pre>
+        </div>
+        <div class="answer">8</div>
+    </div>
+    <div class="field">
+        <div class="ques">
+            <h2 class="center">Q14</h2>
+            <p>Sort an Array Without Using sort() Write a function sortArray(arr) that sorts an array of numbers in ascending order without using the built-in sort() method.</p>
+            <p>Example:</p>
+            <p>sortArray ([5, 3, 8, 1, 2]);</p>
+            <p>// Expected output: [1, 2, 3, 5, 8]</p>
+        </div>
+        <div class="code">
+            <pre>
+function sortArray(array){
+    let array2 = [];
+    let max = 0;
+    for(let i=0; i &lt; array.length;i++){
+        if(max &lt; array[i]){
+            max=array[i]
+        }
+    }
+
+    while(array.length > 0){
+        let min = max;
+        for(let k=0;k &lt; array.length;k++){
+            if(min>array[k]){
+                min=array[k]
+            }
+        }    
+        array2.push(min);
+        array.splice(array.indexOf(min),1)
+    }
+    return array2
+}
+let array = [5,3,8,1,2]
+
+let rv = sortArray(array)
+console.log(rv);
+            </pre>
+        </div>
+        <div class="answer">
+            <pre>
+[ 1, 2, 3, 5, 8 ]
+            </pre>
+        </div>
+    </div>
+    <div class="field">
+        <div class="ques">
+            <h2 class="center">Q15</h2>
+            <p>Palindrome Check</p>
+            <p>Write a function is Palindrome(str) that checks whether a given string is a palindrome (reads the same forward and backward).</p>
+            <p>Example:</p>
+            <p>is Palindrome("madam"); // Expected output: true</p>
+            <p>is Palindrome("hello"); // Expected output: false</p>
+        </div>
+        <div class="code">
+            <pre>
+function isPalindrome(str){
+    let rstr = "";
+
+    for (let i = str.length - 1; i >= 0; i--) {
+        rstr = rstr + str[i];
+    }
+    if(str==rstr){
+        return true
+    }
+    else{
+        return false
+    }
+}
+
+let rv = isPalindrome("madam")
+console.log(rv);                
+            </pre>
+        </div>
+        <div class="answer">
+            <input type="text" id="str">
+            <button onclick="isPalindrome()">go</button>
+            <p id="ans15"></p>
+            <script>
+                function isPalindrome(){
+                    let str = document.getElementById("str").value;
+                    let ans = "";
+                    let rstr = "";
+
+                    for (let i = str.length - 1; i >= 0; i--) {
+                        rstr = rstr + str[i];
+                    }
+                    if(str==rstr){
+                        ans = true
+                    }
+                    else{
+                        ans = false
+                    }
+                    document.getElementById("ans15").innerHTML = ans;
+                }
+            </script>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Palindrome number check</h2>
+            <pre>
+let num = 101
+let og = num;
+let temp = num;
+let nod = 0;
+while(temp>0){
+    temp = Math.floor(temp/10);
+    nod++;
+}
+
+let rev = 0;
+let power = Math.pow(10,nod-1);
+
+while(num>0){
+    let ld = num%10;
+    rev = rev + (ld*power);
+    num = Math.floor(num/10);
+    power = power/10;
+}
+
+if(og==rev){
+    console.log("palindrome number");
+}
+else{
+    console.log("not a palindrome number");
+    
+}
+            </pre>
+        </div>
+        <div class="answer">
+            <input type="number" id="num15.2">
+            <button onclick="palindromenum()">go</button>
+            <p id="ans15.2"></p>
+
+            <script>
+                function palindromenum(){
+                    let num = parseInt(document.getElementById("num15.2").value);
+                    let ans = "";
+                    let og = num;
+                    let temp = num;
+                    let nod = 0;
+                    while(temp>0){
+                        temp = Math.floor(temp/10);
+                        nod++;
+                    }
+
+                    let rev = 0;
+                    let power = Math.pow(10,nod-1);
+
+                    while(num>0){
+                        let ld = num%10;
+                        rev = rev + (ld*power);
+                        num = Math.floor(num/10);
+                        power = power/10;
+                    }
+
+                    if(og==rev){
+                        ans = "palindrome number"
+                    }
+                    else{
+                        ans = "not a palindrome number"
+
+                    }
+                    document.getElementById("ans15.2").innerHTML = ans;
+                }
+                
+            </script>
+        </div>
+    </div>
+</body>
+</html>

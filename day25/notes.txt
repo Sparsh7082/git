@@ -1,0 +1,7 @@
+13 nov 2024
+
+
+
+settimeout - run once after given time
+
+setinterval - run repeatedly after given time

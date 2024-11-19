@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.15.2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.15.1.html">
+            <button>Previous</button>
+        </a>
+        <h1>Primitive and non primitive data type</h1>
+        <a href="js.15.3.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="types">
+        <div class="first">
+            <h2 class="center">Primitve data type</h2>
+            <p>Value</p>
+            <p>It pass the value</p>
+        </div>
+        <div class="second">
+            <h2 class="center">Non primitive data type</h2>
+            <p>Function, array, object</p>
+            <p>reference - address - ram address</p>
+            <p>It does not pass the value it pass the ram address</p>
+            <pre>
+<b>Example: </b>
+let obj1 = {
+    x:100,
+    y:200
+}
+let obj2 = obj1;
+            </pre>
+            <p>Here the ram address is passed like if we change something to obj1 then the obj2 will automatically update. Which makes it as <b>shallow copy</b>.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js2.2.3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js2.2.2.html">
+            <button>Previous</button>
+        </a>
+        <h1>Callbacks</h1>
+        <a href="js2.3.1.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="explain">
+        <p class="center">Function inside another function</p>
+    </div>
+    <div class="explain">
+        <h2 class="center">Task to do</h2>
+        <ul>
+            <li><b>Task 1: </b>connect to dice server</li>
+            <li><b>Task 2: </b>explore the course</li>
+            <li><b>Task 3: </b>select the course</li>
+            <li><b>Task 4: </b>enroll into the class</li>
+        </ul>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Without any callbacks</h2>
+            <pre>
+function connecttoDiceServer(){
+    console.log("connectting ......")
+  setTimeout(() => {
+        console.log("connected to dice server")
+        
+    }, 3000);
+}
+
+function exploreCourse(){
+    console.log("exploring-------")
+    setTimeout(() => {
+        console.log("courses explored")
+        
+    }, 5000);
+}
+
+function selectCourse(){
+    console.log("course selection done")
+}
+function onboard(){
+    console.log("class le rhi hu")
+}
+connecttoDiceServer();
+exploreCourse();
+selectCourse();
+onboard();
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output</h2>
+            <pre>
+connectting ......      (<span class="blue">Immediate</span>)
+exploring-------        (<span class="blue">Immediate</span>)
+course selection done   (<span class="blue">Immediate</span>)
+class le rhi hu         (<span class="blue">Immediate</span>)
+connected to dice server(<span class="red">after 3 sec</span>)
+courses explored        (<span class="red">after 5 sec</span>)
+            </pre>
+
+            <p>It is <b class="red">not</b> running <b>step by step</b> so we will use Async js to make it run step by step.</p>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">With callbacks</h2>
+            <pre>
+function connecttoserver(<b class="red">callbacks</b>){
+    console.log("connecting.....");
+    
+    setTimeout(()=>{console.log("connected");
+        <b class="red">callbacks();</b>        //explore()
+    },3000);
+}
+
+function explore(<b class="red">callbacks</b>){
+    console.log("exploring....");
+
+    setTimeout(()=>{console.log("explored");
+        <b class="red">callbacks();</b>        //selectcourse()
+    },2000);
+    
+}
+
+function selectcourse(<b class="red">callbacks</b>){
+    console.log("selecting.....");
+
+    setTimeout(()=>{console.log("selected")
+        <b class="red">callbacks();</b>        //onboard()
+    },1000);
+    
+}
+
+function onboard(){
+    console.log("enrolled");
+    
+}
+
+<b class="blue">
+connecttoserver(()=>{
+    explore(()=>{
+        selectcourse(()=>{
+            onboard()
+        })
+    })
+})    </b>            
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output</h2>
+            <pre>
+connecting..... (<span class="blue">Immediate</span>)
+connected       (<span class="red">after 3 sec</span>)
+exploring....   (<span class="blue">Immediate</span>)
+explored        (<span class="red">after 2 sec</span>)
+selecting.....  (<span class="blue">Immediate</span>)
+selected        (<span class="red">after 1 sec</span>)
+enrolled        (<span class="blue">Immediate</span>)
+            </pre>
+        </div>
+    </div>
+    <h2 class="center">Issues with callbacks</h2>
+    <div class="explain">
+        <ul>
+            <li>Code readability issues / code maintainence</li>
+            <li>Inversion of control (if there is any spelling mistake in any outter functions then the inner function will not run)</li>
+            <li>pyramid of doom (code horizontally grow)</li>
+        </ul>
+    </div>
+</body>
+</html>

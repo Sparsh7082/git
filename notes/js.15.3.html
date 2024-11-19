@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.15.3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.15.2.html">
+            <button>Previous</button>
+        </a>
+        <h1>Deep copy and shallow copy</h1>
+        <a href="js.15.4.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="types">
+        <div class="first">
+            <h2 class="center">Deep copy</h2>
+            <p>Different Ghar</p>
+            <pre>
+<b>Example:</b>
+let obj1 = {
+    x:100;
+    y:200;
+}
+obj2={...obj1}
+            </pre>
+            <h3 class="center" style="margin-bottom: 0px;">RAM</h3>
+            <table style="border: 2px solid black;border-radius: 10px; margin: auto;padding: 5px;margin-bottom: 10px;" cellspacing="10">
+                <tr>
+                    <td style="background-color: red;">4k</td>
+                    <td style="background-color: lightgreen;">5k</td>
+                </tr>
+                <tr>
+                    <td>obj1</td>
+                    <td>obj2</td>
+                </tr>
+            </table>
+            <p>If we change anything to obj1 it will not affect to obj2 because of different address.</p>
+        </div>
+        <div class="second">
+            <h2 class="center">Shallow copy</h2>
+            <p>Same ghar</p>
+            <pre>
+<b>Example: </b>
+let obj1 = {
+    x:100,
+    y:200
+}
+let obj2 = obj1;
+            </pre>
+            <h3 class="center" style="margin-bottom: 0px;">RAM</h3>
+            <table style="border: 2px solid black;border-radius: 10px; margin: auto;padding: 5px;margin-bottom: 10px;">
+                <tr>
+                    <td>obj1</td>
+                </tr>
+                <tr>
+                    <td style="background-color: red;">4k</td>
+                </tr>
+                <tr>
+                    <td>obj2</td>
+                </tr>
+            </table>
+            <p>If we change anything to obj1 it will automatically change to obj2 because of same address</p>
+        </div>
+    </div>
+</body>
+</html>

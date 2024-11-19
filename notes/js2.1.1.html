@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js2.1.1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.15.4.html">
+            <button>Previous</button>
+        </a>
+        <h1>Functions (objects)</h1>
+        <a href="js2.1.2.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="explain">
+        <p>Suppose we need to make 3 objects with the same keys</p>
+        <pre>
+            let emp1={
+                name:"vikas",
+                age:28,
+                salary:10000,
+                task:function(){
+                    log("teaching)
+                }
+            }
+            
+            let emp2={
+                name:"manas",
+                age:18,
+                salary:5000,
+                task:function(){
+                    log("office boy)
+                }
+            }
+            
+            let emp3={
+                name:"saviur",
+                age:30,
+                salary:10000,
+                task:function(){
+                    log("operation)
+                }
+            }
+        </pre>
+        <p>Here the <b class="red">dry principle</b> got affected so we will use function constructor <b><i>(where constructor means new thing or new object)</i></b></p>
+    </div>
+    <div class="explain">
+        <h2 class="center">Syntax</h2>
+        <pre>
+            function Employee(){
+                this.name = "sparsh";
+                this.age = 24;
+                this.salary = 10000;
+                this.task = function(){
+                    console.log("student")
+                }
+            }
+
+            let obj = new Employee()
+            console.log(obj)
+        </pre>
+        <p>here name, age, salary, task are <b>Keys</b> and this means to bind or <b>insert the value to key</b>. <b>For example-</b> insert the "sparsh" to name key</p>
+    </div>
+    <div class="explain">
+        <h2 class="center">Dynamic Function</h2>
+        <pre>
+            function Employee(<b class="red">name</b>,<b class="blue">age</b>,<b class="green">salary</b>,<b class="violet">task</b>){
+                this.name = <b class="red">name</b>;
+                this.age = <b class="blue">age</b>;
+                this.salary = <b class="green">salary</b>;
+                this.task = <b class="violet">task</b>
+            }
+
+            let obj = new Employee(<b class="red">"sparsh"</b>,<b class="blue">24</b>,<b class="green">10000</b>,<b class="violet">function(){console.log("student")}</b>)
+            console.log(obj)
+
+            <b>Output</b>
+
+            Employee {
+                name: 'sparsh',
+                age: 24,
+                salary: 10000,
+                task: [Function (anonymous)]
+              }
+
+            <b>Run the task function</b>
+            obj.task()  //accessing the object properties by putting <b>.keyname</b>
+            <b>Output</b>
+            student
+        </pre>
+    </div>
+</body>
+</html>

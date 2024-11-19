@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.15.1</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .types{
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+        .dot{
+            border-radius: 10px;
+            border: 2px solid black;
+            width: 40vw;
+            text-align: center;
+        }
+        .square{
+            border-radius: 10px;
+            border: 2px solid black;
+            width: 40vw;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js.13.3.html">
+            <button>Previous</button>
+        </a>
+        <h1>Objects</h1>
+        <a href="js.15.2.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="explain">
+        <ul>
+            <li>Stores the multiple details like fname, lname, age, salary, other details, ismarried</li>
+        </ul>
+    </div>
+    <div class="explain">
+        <h2>Syntax</h2>
+        <p>object = {
+            key : value    
+        }</p>
+    </div>
+    <div class="explain">
+        <h2>Example</h2>
+        <pre>
+            mydetails = {
+                fname : "sparsh",
+                lname : "gupta",
+                age : 24,
+                salary : 10000,
+                ismarried : false,
+                marks : [10,20,30],
+                gradde : 'A',
+                task : function(){
+                    console.log("student")
+                },
+                otherdetails : {
+                    hometown : "delhi",
+                    education : "MBA"
+                }
+            }
+        </pre>
+    </div>
+    <h2 class="center">How to access properties</h2>
+    <div class="types">
+        <div class="dot">
+            <h2 class="center">Dot Notation</h2>
+            <p>console.log(mydetails.grade)</p>
+            <p>Output: A</p>
+        </div>
+        <div class="square">
+            <h2 class="center">Square Notation</h2>
+            <p>console.log(mydetails['ismarried'])</p>
+            <p>Output: false</p>
+        </div>
+    </div>
+    <div class="explain">
+        <h2 class="center">Loops</h2>
+        <p>Only for in loop apply on this.</p>
+        <pre>
+            for(let maal in mydetails){
+                console.log(maal)
+            }
+        </pre>
+        <p>Here the maal contain all <b>keys</b>.</p>
+        <pre>
+            for(let maal in mydetails){
+                console.log(mydetails[maal])
+            }
+        </pre>
+        <p>Now this will give the <b>values</b>.</p>
+        <pre>
+            for(let maal in mydetails){
+                console.log(maal,mydetails[maal])
+            }
+        </pre>
+        <p>Now this will give both <b>key</b> and <b>value</b>.</p>
+    </div>
+    <div class="explain">
+        <h2 class="center">Access the task function</h2>
+        <p>console.log(mydetails.task())</p>
+    </div>
+    <div class="explain">
+        <h2 class="center">Mutability check</h2>
+        <pre>
+            mydetails.sex = "male";
+            console.log(mydetails)
+        </pre>
+        <p>the new key has been added hence, the <b class="green">objects are mutable</b>.</p>
+    </div>
+    <div class="explain">
+        <h2 class="center">Value change check</h2>
+        <pre>
+            mydetails.salary = 1000;
+            console.log(mydetails.salary)
+            <b>Output:</b> 1000
+        </pre>
+        <p>In JavaScript, when you change the value of an existing key in an object, it <b class="red">overwrites the previous value</b> rather than creating a new key. </p>
+    </div>
+</body>
+</html>

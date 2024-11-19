@@ -65,7 +65,11 @@ console.log(ans);
             <p id="answer"></p>
             <script>
                 function armstrong(){
+<<<<<<< HEAD
                     var num = document.getElementById("number").value;
+=======
+                    var num = parseInt(document.getElementById("number").value);
+>>>>>>> 5465743 (js2.3.1)
                     var nod=0;
                     var temp=num;
                     var temp2=num;
@@ -96,5 +100,86 @@ console.log(ans);
             </script>
         </div>
     </div>
+<<<<<<< HEAD
 </body>
 </html>
+=======
+    <h2 class="center">Armstrong number in range</h2>
+    <div class="field">
+        <div class="code">
+<pre>
+<code>
+function armstrong(sn,ln){
+    for(let i=sn;i<=ln;i++){
+        let nod=0;
+        let temp=i;
+        let temp2=i;
+        let an=0;
+
+        // finding number of digits
+        while(temp>0){
+            temp=Math.floor(temp/10);
+            nod++;
+        }
+
+        while(temp2>0){
+        let ld=temp2%10;    //finding last digit
+        an=an+Math.pow(ld,nod);     //calculating armstrong number
+        temp2=Math.floor(temp2/10);     // updating temp2
+        }
+
+        // checking whether armstrong number or not
+        if(an==i){
+        console.log(i);
+         
+        }
+    }
+}
+    
+                
+armstrong(1,1000);
+    
+</code>
+</pre>    
+        </div>
+        <div class="answer">
+            <input type="number" id="sn">
+            <input type="number" id="ln">
+            <button onclick="armstrong2()">go</button>
+            <p id="answer2"></p>
+            <script>
+                function armstrong2(){
+                    var sn = document.getElementById("sn").value;
+                    var ln = document.getElementById("ln").value;
+                    var ans2="";
+                    for(let i=sn;i<=ln;i++){
+                        var nod2=0;
+                        var temp3=i;
+                        var temp4=i;
+                        var an2=0;
+
+                        // finding number of digits
+                        while(temp3>0){
+                            temp3=Math.floor(temp3/10);
+                            nod2++;
+                        }
+                    
+                        while(temp4>0){
+                            var ld2=temp4%10;    //finding last digit
+                            an2=an2+Math.pow(ld2,nod2);     //calculating armstrong number
+                            temp4=Math.floor(temp4/10);     // updating temp2
+                        }
+                    
+                        // checking whether armstrong number or not
+                        if(an2==i){
+                            ans2=ans2+i+"<br>"; 
+                        }
+                    }
+                    document.getElementById("answer2").innerHTML = ans2;
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>
+>>>>>>> 5465743 (js2.3.1)
