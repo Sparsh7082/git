@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js2.3.3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js2.3.2.html">
+            <button>Previous</button>
+        </a>
+        <h1>Fetch</h1>
+        <a href="js2.4.1.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="explain">
+        <ul>
+            <li>Fetch is an API which written in JS native (means the part of JS)</li>
+            <li>It helps to pick the data from any URL or update the data by hitting on the URL</li>
+            <li>API - url - hit - data</li>
+            <li>
+                Fetch works in two steps-
+                <ul>
+                    <li><b>Step 1-</b> First it gives <b class="red">bolb data</b> (which we can't able to read)</li>
+                    <li><b>Step 2-</b> Next we need to convert the <b class="red">bolb data</b> to <b class="green">json format (object format)</b> (so that we can read that data)</li>
+                </ul>
+            </li>
+            <li>
+                <dl>
+                    <dt><b>Syntax</b></dt>
+                    <dd>fetch('url')</dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+    <h2 class="center">Async-await (<i>for time</i>)</h2>
+    <div class="explain">
+        <h2 class="center">Example</h2>
+        <pre>
+            async function getdata(){
+                let bolbdata = await fetch('https://randomuser.me/api/')    //because we need time to fetch the data
+                let actualdata = await bolbdata.json()                      //because we need time to convert the data
+                console.log(actualdata)
+                console.log(actualdata.results[0].gender)                   //for specific selection
+            }
+            getdata();
+        </pre>
+    </div>
+    <div class="explain">
+        <h2 class="center">Example 2</h2>
+        <pre>
+            async function getdata(){
+                let boldata = await fetch('https://restcountries.com/v3.1/all')
+                let actualdata = await boldata.json()
+                console.log(actualdata);
+
+            }
+            getdata()
+
+            <b>check the output on browser -> right click -> inspect -> console</b>
+        </pre>
+    </div>
+    <p class="center">We can use promise or callback but it is outdated and lengthy so we use async-await only.</p>
+</body>
+</html>

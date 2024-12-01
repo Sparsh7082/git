@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Upper case error</h1>
+    <textarea onkeyup="ucerror(event)"></textarea>
+    <script>
+        let textarea = document.querySelector("textarea")
+        let body = document.querySelector("body")
+        let h2 = document.createElement("h2")
+        function ucerror(event){
+            let text = event.target.value;
+            if (text == text.toUpperCase()){
+                h2.innerText="error";
+            }
+            else{
+                h2.innerText="";
+            }
+        }
+        body.append(h2)
+    </script>
+</body>
+</html>

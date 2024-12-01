@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lower case to upper case</h1>
+    <textarea onkeyup="lctouc(event)"></textarea>
+    <script>
+        let textarea = document.querySelector("textarea")
+        let body = document.querySelector("body")
+        let h2 = document.createElement("h2")
+        function lctouc(event){
+            let text = event.target.value;
+            h2.innerText = text.toUpperCase()
+        }
+        body.append(h2)
+    </script>
+</body>
+</html>

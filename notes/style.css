@@ -24,9 +24,6 @@ button{
     margin-bottom: 10px;
     padding: 0px 10px;
 }
-<<<<<<< HEAD
-=======
-
 .types{
     display: flex;
     justify-content: space-around;
@@ -45,7 +42,6 @@ button{
     text-align: center;
 }
 
->>>>>>> 5465743 (js2.3.1)
 .field{
     display: flex;
     justify-content: space-evenly;
@@ -53,14 +49,11 @@ button{
     border-radius: 10px;
     margin-bottom: 10px;
 }
-<<<<<<< HEAD
-=======
 .ques{
     border-right: 2px solid black;
     width: 50%;
     padding: 20px;
 }
->>>>>>> 5465743 (js2.3.1)
 .code{
     border-right: 2px solid black;
     width: 50vw;
@@ -94,12 +87,9 @@ li{
 .blue{
     color: blue;
 }
-<<<<<<< HEAD
-=======
 .violet{
     color:blueviolet;
 }
 .center{
     text-align: center;
 }
->>>>>>> 5465743 (js2.3.1)
