@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js2.4.3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js2.4.2.html">
+            <button>Previous</button>
+        </a>
+        <h1>Element selection</h1>
+        <a href="js2.4.3.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <h2 class="center">html (getElementBy)</h2>
+    <div class="explain">
+        <h2 class="center">getElementById</h2>
+        <div class="field">
+            <div class="code">
+                <h2 class="center">Code</h2>
+                <pre>
+                    &lt;h1 id="heading">Sparsh&lt;/h1>
+
+                    &lt;script>
+                        let heading = document.getElementById("heading")
+                        console.log(heading);
+                        
+                    &lt;/script>
+                </pre>
+            </div>
+            <div class="answer">
+                <h2 class="center">Output on Browser</h2>
+                <h1>Sparsh</h1>
+                <hr>
+                <h2 class="center">Output on console</h2>
+                &lt;h1 id="heading">Sparsh&lt;/h1>
+            </div>
+        </div>
+    </div>
+    <div class="explain">
+        <h2 class="center">getElementsByTagName</h2>
+        <div class="field">
+            <div class="code">
+                <h2 class="center">Code</h2>
+                <pre>
+                    &lt;h1>Sparsh&lt;/h1>
+                    &lt;h1>Gupta&lt;/h1>
+                    &lt;script>
+                        let heading = document.getElementsByTagName("h1")
+                        console.log(heading);
+
+                    &lt;/script>
+                </pre>
+            </div>
+            <div class="answer">
+                <h2 class="center">Output on Browser</h2>
+                <h1>Sparsh</h1>
+                <h1>Gupta</h1>
+                <hr>
+                <h2 class="center">Output on Console</h2>
+                HTMLCollection(2) [h1, h1] <b class="red">same like nodelist</b>
+            </div>
+        </div>
+        <div class="explain">
+            <ul>
+                <li>If the html give the array like thing (because of multiple element selection) then it gives the <b>HTML Collection</b></li>
+                <li><b>Element selection =></b> console.log(heading[0])</li>
+            </ul>
+        </div>
+    </div>
+    <div class="explain">
+        <h2 class="center">getElementsByClassName</h2>
+        <div class="field">
+            <div class="code">
+                <h2 class="center">Code</h2>
+                <pre>
+        &lt;h1 class="heading">Sparsh&lt;/h1>
+        &lt;h1 class="heading">Gupta&lt;/h1>
+        
+        &lt;script>
+            let heading = document.getElementsByClassName("heading")
+            console.log(heading);
+        &lt;/script>
+                </pre>
+            </div>
+            <div class="answer">
+                <h2 class="center">Output on Browser</h2>
+                <h1>Sparsh</h1>
+                <h1>Gupta</h1>
+                <hr>
+                <h2 class="center">Output on Console</h2>
+                HTMLCollection(2) [h1.heading, h1.heading]
+            </div>
+        </div>
+    </div>
+</body>
+</html>

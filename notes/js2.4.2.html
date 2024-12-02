@@ -19,7 +19,7 @@
             <button>Previous</button>
         </a>
         <h1>Element selection</h1>
-        <a href="js2.4.2.html">
+        <a href="js2.4.3.html">
             <button>Next</button>
         </a>
     </div>
@@ -32,9 +32,120 @@
                     <dt><b>Syntax-</b></dt>
                     <dd>document.querySelector("element")</dd>
                     <dd><b>element:</b> can be h1, p, button, input, etc</dd>
+                    <dt><b>For id</b></dt>
+                    <dd>document.querySelector("#id")</dd>
+                    <dt><b>For class</b></dt>
+                    <dd>document.querySelector(".class")</dd>
                 </dl>
             </li>
         </ul>
     </div>
+    <h2 class="center">Example 1</h2>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Code</h2>
+            <pre>
+                &lt;h1>Sparsh&lt;/h1>
+                
+                &lt;script>
+                    let heading = document.querySelector("h1")
+                    console.log(heading);
+                &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output on browser</h2>
+            <h1>Sparsh</h1>
+            <hr>
+            <h2 class="center">Output on console</h2>
+            &lt;h1>Sparsh&lt;/h1>
+        </div>
+    </div>
+    <h2 class="center">Example 2</h2>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Code</h2>
+            <pre>
+&lt;button onclick="pink()">click me to make me pink&lt;/button>
+
+&lt;script>
+    let btn=document.querySelector("button")
+    function pink(){
+         btn.style.color="pink"
+         btn.style.backgroundColor="black"
+    }
+&lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output</h2>
+            <button id="button1" onclick="pink()">click me to make me pink</button>
+            <script>
+                let btn=document.querySelector("#button1")
+                function pink(){
+                     btn.style.color="pink"
+                     btn.style.backgroundColor="black"
+                }
+            </script>
+        </div>
+    </div>
+    <h2 class="center">querySelectorAll</h2>
+    <div class="explain">
+        <ul>
+            <li>It catch all the element it found</li>
+            <li>
+                <dl>
+                    <dt><b>Syntax-</b></dt>
+                    <dd>document.querySelectorAll("element")</dd>
+                    <dd><b>elements:</b> can be many h1, many p, many button, many input etc</dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+    <h2 class="center">Example</h2>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Code</h2>
+            <pre>
+                &lt;h1>Sparsh&lt;/h1>
+                &lt;h1>Gupta&lt;/h1>
+
+                &lt;script>
+                    let headings= document.querySelectorAll("h1")
+                    console.log(headings);
+                &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output on Browser</h2>
+            <h1>Sparsh</h1>
+            <h1>Gupta</h1>
+            <hr>
+            <h2 class="center">Output on Console</h2>
+            NodeList(2) [h1, h1]    <b class="red"><= nodelist is like a array which contain multiple elements</b>
+        </div>
+    </div>
+    <div class="explain">
+        <ul>
+            <li>We can access nodelist with the help of index like 0 idx will catch the first element, etc.... And with the help of this we can apply the loops as well</li>
+            <li>
+                <dl>
+                    <dt><b>Example:</b></dt>
+                    <dd>
+                        <pre>
+                            for(let idx=0;idx&lt;paras.length;idx++){
+                                console.log(paras[idx])
+                            }
+                        </pre>
+                    </dd>
+                    <dt><b>Output on console:</b></dt>
+                    <dd>&lt;h1>Sparsh&lt;/h1></dd>
+                    <dd>&lt;h1>Gupta&lt;/h1></dd>
+                </dl>
+            </li>
+        </ul>
+        
+    </div>
+    <h3 class="center"></h3>
 </body>
 </html>
