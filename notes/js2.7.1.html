@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js2.7.1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js2.6.4.html">
+            <button>Previous</button>
+        </a>
+        <h1>Form</h1>
+        <a href="js2.7.2.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">code</h2>
+            <pre>
+    &lt;form id="form">
+    &lt;input type="text" id="name" name="name">
+    &lt;button>submit&lt;/button>
+    &lt;/form>
+
+    &lt;script>
+        let form = document.getElementById("form")
+
+        form.addEventListener("submit",function(){
+            console.log("form submitted");
+        })
+    &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output on browser</h2>
+            <input type="text">
+            <button>submit</button>
+            <hr>
+            <h2 class="center">Output on console</h2>
+            <b class="red">it runs and reload</b>
+        </div>
+    </div>
+    <h3 class="center">To prevent from run and reload we will apply <span class="blue">preventDefault()</span></h3>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">code</h2>
+            <pre>
+    &lt;form id="form">
+    &lt;input type="text" id="name" name="name">
+    &lt;button>submit&lt;/button>
+    &lt;/form>
+
+    &lt;script>
+        let form = document.getElementById("form")
+
+        form.addEventListener("submit",function(event){
+            event.<b>preventDefault</b>()
+            console.log("form submitted");
+        })
+    &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output on browser</h2>
+            <input type="text">
+            <button>submit</button>
+            <hr>
+            <h2 class="center">Output on console</h2>
+            form submitted
+        </div>
+    </div>
+    <h2 class="center">3 Method to catch the value of input</h2>
+    <div class="explain">
+        <h2 class="center">Method 1</h2>
+        <p class="center">console.log()</p>
+        <div class="field">
+            <div class="code">
+                <h2 class="center">Code</h2>
+                <pre>
+    &lt;form id="form">
+        &lt;input type="text" id="name" name="name" placeholder="name">
+        &lt;input type="text" id="age" name="age" placeholder="age">
+        &lt;input type="text" id="salary" name="salary" placeholder="salary">
+        &lt;button>submit&lt;/button>
+    &lt;/form>
+
+    &lt;script>
+        let form = document.getElementById("form")
+        
+        form.addEventListener("submit",function(event){
+            event.preventDefault()
+
+            let name = document.querySelector("#name")
+            let age = document.querySelector("#age")
+            let salary = document.querySelector("#salary")
+
+            console.log(name.value,age.value,salary.value);
+        })
+    &lt;/script>
+                </pre>
+            </div>
+            <div class="answer">
+                <h2 class="center">Output on browser</h2>
+                <form id="form">
+                    <input type="text" id="name" name="name" placeholder="name">
+                    <input type="text" id="age" name="age" placeholder="age">
+                    <input type="text" id="salary" name="salary" placeholder="salary">
+                    <button>submit</button>
+                </form>
+                <hr>
+                <h2 class="center">Output on console</h2>
+                <span id="ans1_1"></span>
+                <span id="ans1_2"></span>
+                <span id="ans1_3"></span>
+                <script>
+                    let form = document.getElementById("form")
+                    
+                    form.addEventListener("submit",function(event){
+                        event.preventDefault()
+                        let name = document.querySelector("#name")
+                        let age = document.querySelector("#age")
+                        let salary = document.querySelector("#salary")
+                        document.getElementById("ans1_1").innerHTML = name.value
+                        document.getElementById("ans1_2").innerHTML = age.value
+                        document.getElementById("ans1_3").innerHTML = salary.value  
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="explain">
+        <h2 class="center">Method 2</h2>
+        <p class="center">console.dir()</p>
+        <div class="field">
+            <div class="code">
+                <h2 class="center">Code</h2>
+                <pre>
+    &lt;form id="form">
+        &lt;input type="text" id="name" name="name" placeholder="name">
+        &lt;input type="text" id="age" name="age" placeholder="age">
+        &lt;input type="text" id="salary" name="salary" placeholder="salary">
+        &lt;button>submit&lt;/button>
+    &lt;/form>
+
+    &lt;script>
+        let form = document.getElementById("form")
+        
+        form.addEventListener("submit",function(event){
+            event.preventDefault()
+
+            let name = document.querySelector("#name")
+            let age = document.querySelector("#age")
+            let salary = document.querySelector("#salary")
+
+            console.dir(name.value)
+            console.dir(age.value)
+            console.dir(salary.value)
+        })
+    &lt;/script>
+                </pre>
+            </div>
+            <div class="answer">
+                <h2 class="center">Output on browser</h2>
+                <form id="form2">
+                    <input type="text" id="name2" name="name" placeholder="name">
+                    <input type="text" id="age2" name="age" placeholder="age">
+                    <input type="text" id="salary2" name="salary" placeholder="salary">
+                    <button>submit</button>
+                </form>
+                <hr>
+                <h2 class="center">Output on console</h2>
+                <p id="ans2_1"></p>
+                <p id="ans2_2"></p>
+                <p id="ans2_3"></p>
+                <script>
+                    let form2 = document.getElementById("form2")
+                    
+                    form2.addEventListener("submit",function(event2){
+                        event2.preventDefault()
+                        let name = document.querySelector("#name2")
+                        let age = document.querySelector("#age2")
+                        let salary = document.querySelector("#salary2")
+                        document.getElementById("ans2_1").innerHTML = name.value
+                        document.getElementById("ans2_2").innerHTML = age.value
+                        document.getElementById("ans2_3").innerHTML = salary.value  
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="explain">
+        <h2 class="center">Method 3</h2>
+        <p class="center">loop</p>
+        <div class="field">
+            <div class="code">
+                <h2 class="center">Code</h2>
+                <pre>
+    &lt;form id="form">
+        &lt;input type="text" id="name" name="name" placeholder="name">
+        &lt;input type="text" id="age" name="age" placeholder="age">
+        &lt;input type="text" id="salary" name="salary" placeholder="salary">
+        &lt;button>submit&lt;/button>
+    &lt;/form>
+
+    &lt;script>
+        let form = document.getElementById("form")
+        
+        form.addEventListener("submit",function(event){
+            event.preventDefault()
+
+            let name = document.querySelector("#name")
+            let age = document.querySelector("#age")
+            let salary = document.querySelector("#salary")
+
+            for(let ans of event.target){
+                console.log(ans.value);                
+            }
+        })
+    &lt;/script>
+                </pre>
+            </div>
+            <div class="answer">
+                <h2 class="center">Output on browser</h2>
+                <form id="form3">
+                    <input type="text" id="name3" name="name" placeholder="name">
+                    <input type="text" id="age3" name="age" placeholder="age">
+                    <input type="text" id="salary3" name="salary" placeholder="salary">
+                    <button>submit</button>
+                </form>
+                <hr>
+                <h2 class="center">Output on console</h2>
+                <p id="ans3_1"></p>
+                <p id="ans3_2"></p>
+                <p id="ans3_3"></p>
+                <script>
+                    let form3 = document.getElementById("form3")
+                    
+                    form3.addEventListener("submit",function(event3){
+                        event3.preventDefault()
+                        let name = document.querySelector("#name3")
+                        let age = document.querySelector("#age3")
+                        let salary = document.querySelector("#salary3")
+                        document.getElementById("ans3_1").innerHTML = name.value
+                        document.getElementById("ans3_2").innerHTML = age.value
+                        document.getElementById("ans3_3").innerHTML = salary.value  
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="explain">
+        <h2 class="center">Method 4</h2>
+        <p class="center">loop- document.forms</p>
+        <div class="field">
+            <div class="code">
+                <h2 class="center">Code</h2>
+                <pre>
+    &lt;form id="form">
+        &lt;input type="text" id="name" name="name" placeholder="name">
+        &lt;input type="text" id="age" name="age" placeholder="age">
+        &lt;input type="text" id="salary" name="salary" placeholder="salary">
+        &lt;button>submit&lt;/button>
+    &lt;/form>
+
+    &lt;script>
+        let form = document.getElementById("form")
+        
+        form.addEventListener("submit",function(event){
+            event.preventDefault()
+
+            for(let ans of document.forms[0]){
+                console.log(ans.value);                
+            }
+        })
+    &lt;/script>
+                </pre>
+            </div>
+            <div class="answer">
+                <h2 class="center">Output on browser</h2>
+                <form id="form4">
+                    <input type="text" id="name4" name="name" placeholder="name">
+                    <input type="text" id="age4" name="age" placeholder="age">
+                    <input type="text" id="salary4" name="salary" placeholder="salary">
+                    <button>submit</button>
+                </form>
+                <hr>
+                <h2 class="center">Output on console</h2>
+                <p id="ans4_1"></p>
+                <p id="ans4_2"></p>
+                <p id="ans4_3"></p>
+                <script>
+                    let form4 = document.getElementById("form4")
+                    
+                    form4.addEventListener("submit",function(event4){
+                        event4.preventDefault()
+                        let name = document.querySelector("#name4")
+                        let age = document.querySelector("#age4")
+                        let salary = document.querySelector("#salary4")
+                        document.getElementById("ans4_1").innerHTML = name.value
+                        document.getElementById("ans4_2").innerHTML = age.value
+                        document.getElementById("ans4_3").innerHTML = salary.value  
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="explain">
+        <h2 class="center">Multiple Forms</h2>
+        <ul>
+            <li>Suppose we have 2 forms and we need to catch the second one in the document.forms so we will write the name of the form inside the [' ']</li>
+            <li><b>Example:</b> &lt;form name="second">&lt;/form></li>
+            <li>
+                <pre>
+        for(let ans of document.forms['second']){
+            console.log(ans.value);                
+        }
+                </pre>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

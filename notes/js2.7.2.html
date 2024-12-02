@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js2.7.2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js2.7.1.html">
+            <button>Previous</button>
+        </a>
+        <h1>Form events</h1>
+        <a href="js2.7.2.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="explain">
+        <ul>
+            <li><b>Change-</b> when  we change anything in the form and click outside it will fire</li>
+            <li><b>Focusin-</b> when we click in the input it will fire</li>
+            <li><b>Blur-</b></li>
+        </ul>
+    </div>
+    <h2 class="center">Change</h2>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Code</h2>
+            <pre>
+    &lt;form id="form">
+        &lt;input type="text" id="name" name="name" placeholder="name">
+        &lt;button>submit</button>
+    &lt;/form>
+    &lt;script>
+        let form = document.getElementById("form")
+        
+        form.addEventListener("change",function(event){
+            event.preventDefault()
+            console.log("I am changed");
+            console.log(event.target.value)
+        })
+    &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output on browser</h2>
+            <form id="form1">
+                <input type="text" id="name1" name="name" placeholder="name">
+                <button>submit</button>
+            </form>
+            <hr>
+            <h2 class="center">Output on console</h2>
+            <p id="ans1_1"></p>
+            <p id="ans1_2"></p>
+            <script>
+                let form1 = document.getElementById("form1")
+                
+                form1.addEventListener("change",function(event1){
+                    event1.preventDefault()
+                    document.getElementById("ans1_1").innerHTML = "I am changed"
+                    document.getElementById("ans1_2").innerHTML = event.target.value
+                })
+            </script>
+        </div>
+    </div>
+    <h2 class="center">Focusin</h2>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Code</h2>
+            <pre>
+    &lt;form id="form">
+        &lt;input type="text" id="name" name="name" placeholder="name">
+        &lt;button>submit</button>
+    &lt;/form>
+    &lt;script>
+        let form = document.getElementById("form")
+        
+        form.addEventListener("focusin",function(event){
+            event.preventDefault()
+            console.log("I am focused");
+        })
+    &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output on browser</h2>
+            <form id="form2">
+                <input type="text" id="name2" name="name" placeholder="name">
+                <button>submit</button>
+            </form>
+            <hr>
+            <h2 class="center">Output on console</h2>
+            <p id="ans2"></p>
+            <script>
+                let form2 = document.getElementById("form2")
+                
+                form2.addEventListener("focusin",function(event2){
+                    event2.preventDefault()
+                    document.getElementById("ans2").innerHTML = "I am focused"
+                })
+            </script>
+        </div>
+    </div>
+</body>
+</html>

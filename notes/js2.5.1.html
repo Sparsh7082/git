@@ -101,6 +101,41 @@
             </script>
         </div>
     </div>
+    <h2 class="center">Onclick (addEventListener in js)</h2>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Code</h2>
+            <pre>
+    &lt;h1>Sparsh&lt;/h1>
+    &lt;button>Click me&lt;/button>
+
+    &lt;script>
+        let button = document.querySelector("button")
+        let heading = document.querySelector("h1")
+
+        button.addEventListener("click",function(){
+            heading.style.backgroundColor = 'pink';
+            heading.style.color = 'green';
+        })
+    &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output</h2>
+            <h1 id="heading1_2">Sparsh</h1>
+            <button id="button1_2">Click me</button>
+
+            <script>
+                let button1_2 = document.querySelector("#button1_2")
+                let heading1_2 = document.querySelector("#heading1_2")
+            
+                button1_2.addEventListener("click",function(){
+                    heading1_2.style.backgroundColor = 'pink';
+                    heading1_2.style.color = 'green';
+                })
+            </script>
+        </div>
+    </div>
     <h2 class="center">Ondblclick (double click)</h2>
     <div class="field">
         <div class="code">
