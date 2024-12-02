@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js2.5.1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js2.4.3.html">
+            <button>Previous</button>
+        </a>
+        <h1>Mouse Events</h1>
+        <a href="js2.5.2.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="explain">
+        <ul>
+            <li>Click</li>
+            <li>Double click</li>
+            <li>Move</li>
+            <li>Mouse over</li>
+        </ul>
+    </div>
+    <h2 class="center">Onclick</h2>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Code</h2>
+            <pre>
+    &lt;h1>Sparsh&lt;/h1>
+    &lt;button onclick="colorchange()">Click me&lt;/button>
+
+    &lt;script>
+        let button = document.querySelector("button")
+        let heading = document.querySelector("h1")
+
+        function colorchange(){
+            heading.style.backgroundColor = 'pink';
+            heading.style.color = 'green';
+        }
+        &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output</h2>
+            <h1 id="heading1">Sparsh</h1>
+            <button onclick="colorchange()">Click me</button>
+
+            <script>
+                let button1 = document.querySelector("button")
+                let heading1 = document.querySelector("#heading1")
+            
+                function colorchange(){
+                    heading1.style.backgroundColor = 'pink';
+                    heading1.style.color = 'green';
+                }
+            </script>
+        </div>
+    </div>
+    <h2 class="center">Onclick (use in js)</h2>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Code</h2>
+            <pre>
+    &lt;h1>Sparsh&lt;/h1>
+    &lt;button>Click me&lt;/button>
+
+    &lt;script>
+        let button = document.querySelector("button")
+        let heading = document.querySelector("h1")
+
+        button.onclick = function(){
+            heading.style.backgroundColor = 'pink';
+            heading.style.color = 'green';
+        }
+    &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output</h2>
+            <h1 id="heading1_1">Sparsh</h1>
+            <button id="button1_1">Click me</button>
+
+            <script>
+                let button1_1 = document.querySelector("#button1_1")
+                let heading1_1 = document.querySelector("#heading1_1")
+            
+                button1_1.onclick = function(){
+                    heading1_1.style.backgroundColor = 'pink';
+                    heading1_1.style.color = 'green';
+                }
+            </script>
+        </div>
+    </div>
+    <h2 class="center">Ondblclick (double click)</h2>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Code</h2>
+            <pre>
+    &lt;h1>Sparsh&lt;/h1>
+    &lt;button ondblclick="colorchange()">Click me&lt;/button>
+
+    &lt;script>
+        let button = document.querySelector("button")
+        let heading = document.querySelector("h1")
+
+        function colorchange(){
+            heading.style.backgroundColor = 'pink';
+            heading.style.color = 'green';
+        }
+        &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output</h2>
+            <h1 id="heading2">Sparsh</h1>
+            <button ondblclick="dblcolorchange()">Click me</button>
+
+            <script>
+                let button2 = document.querySelector("button")
+                let heading2 = document.querySelector("#heading2")
+            
+                function dblcolorchange(){
+                    heading2.style.backgroundColor = 'pink';
+                    heading2.style.color = 'green';
+                }
+            </script>
+        </div>
+    </div>
+    <h2 class="center">Onmouseleave (when remove the cursor from the button)</h2>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Code</h2>
+            <pre>
+    &lt;h1>Sparsh&lt;/h1>
+    &lt;button onmouseleave="colorchange()">Click me&lt;/button>
+
+    &lt;script>
+        let button = document.querySelector("button")
+        let heading = document.querySelector("h1")
+
+        function colorchange(){
+            heading.style.backgroundColor = 'pink';
+            heading.style.color = 'green';
+        }
+        &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output</h2>
+            <h1 id="heading3">Sparsh</h1>
+            <button onmouseleave="mlcolorchange()">Click me</button>
+
+            <script>
+                let button3 = document.querySelector("button")
+                let heading3 = document.querySelector("#heading3")
+            
+                function mlcolorchange(){
+                    heading3.style.backgroundColor = 'pink';
+                    heading3.style.color = 'green';
+                }
+            </script>
+        </div>
+    </div>
+    <h2 class="center">Onmouseover (when hover the cursor on the button)</h2>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Code</h2>
+            <pre>
+    &lt;h1>Sparsh&lt;/h1>
+    &lt;button onmouseover="colorchange()">Click me&lt;/button>
+
+    &lt;script>
+        let button = document.querySelector("button")
+        let heading = document.querySelector("h1")
+
+        function colorchange(){
+            heading.style.backgroundColor = 'pink';
+            heading.style.color = 'green';
+        }
+        &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output</h2>
+            <h1 id="heading4">Sparsh</h1>
+            <button onmouseover="mocolorchange()">Click me</button>
+
+            <script>
+                let button4 = document.querySelector("button")
+                let heading4 = document.querySelector("#heading4")
+            
+                function mocolorchange(){
+                    heading4.style.backgroundColor = 'pink';
+                    heading4.style.color = 'green';
+                }
+            </script>
+        </div>
+    </div>
+    <h2 class="center">Onmousewheel (scroll on the button)</h2>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Code</h2>
+            <pre>
+    &lt;h1>Sparsh&lt;/h1>
+    &lt;button onmousewheel="colorchange()">Click me&lt;/button>
+
+    &lt;script>
+        let button = document.querySelector("button")
+        let heading = document.querySelector("h1")
+
+        function colorchange(){
+            heading.style.backgroundColor = 'pink';
+            heading.style.color = 'green';
+        }
+        &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output</h2>
+            <h1 id="heading5">Sparsh</h1>
+            <button onmousewheel="mwcolorchange()">Click me</button>
+
+            <script>
+                let button5 = document.querySelector("button")
+                let heading5 = document.querySelector("#heading5")
+            
+                function mwcolorchange(){
+                    heading5.style.backgroundColor = 'pink';
+                    heading5.style.color = 'green';
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

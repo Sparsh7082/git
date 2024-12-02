@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js2.5.3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js2.5.2.html">
+            <button>Previous</button>
+        </a>
+        <h1>Innertext InnerHTML</h1>
+        <a href="js2.5.4.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="explain">
+        <ul>
+            <li><b>Innertext</b> print the text as it is</li>
+            <li><b>InnerHTML</b> checks the text whether it uses the html element... if it use then it apply it</li>
+        </ul>
+    </div>
+    <h2 class="center">Example</h2>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Code</h2>
+            <pre>
+    &lt;div>
+    
+    &lt;/div>
+
+    &lt;script>
+        let mydiv = document.querySelector("div")
+
+        let ul = document.createElement("ul")
+        let li = document.createElement("li")
+
+        li.<b>innerText</b> = "&lt;h1>Apple&lt;/h1>"
+        
+        ul.append(li)
+        mydiv.append(ul)
+    &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output</h2>
+            <ul>
+                <li>&lt;h1>Apple&lt;/h1></li>
+            </ul>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Code</h2>
+            <pre>
+    &lt;div>
+    
+    &lt;/div>
+
+    &lt;script>
+        let mydiv = document.querySelector("div")
+
+        let ul = document.createElement("ul")
+        let li = document.createElement("li")
+
+        li.<b>innerHTML</b> = "&lt;h1>Apple&lt;/h1>"
+        
+        ul.append(li)
+        mydiv.append(ul)
+    &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output</h2>
+            <ul>
+                <li><h1>Apple</h1></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

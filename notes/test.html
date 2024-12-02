@@ -4,14 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .pink{
+            background-color: pink;
+        }
+
+        .aqua{
+            background-color: aqua;
+        }
+    </style>
 </head>
 <body>
-    <h1 class="heading">Sparsh</h1>
-    <h1 class="heading">Gupta</h1>
+    <h1>Hello</h1>
+    <button>Click me</button>
 
     <script>
-        let heading = document.getElementsByClassName("heading")
-        console.log(heading);
+        let heading = document.querySelector("h1")
+        let button = document.querySelector("button")
+
+        button.onclick = function(){
+            heading.className = "pink"
+        }
+
+        button.ondblclick = function(){
+            heading.className = "aqua"
+        }
+        
+        button.onwheel = function(){
+            heading.className = ""
+        }
     </script>
 </body>
 </html>

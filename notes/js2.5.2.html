@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js2.5.2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js2.5.1.html">
+            <button>Previous</button>
+        </a>
+        <h1>Append Prepend</h1>
+        <a href="js2.5.3.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="explain">
+        <ul>
+            <li>Append will insert the thing to last</li>
+            <li>Prepend will insert the thing to first</li>
+            <li>Append and append child works same</li>
+        </ul>
+    </div>
+    <div class="explain">
+        <h2 class="center">Task</h2>
+        <ul>
+            <li>Create a h1 (name) in the div</li>
+            <li>Create a button (click me) in the div</li>
+            <li>Do these task with the help of js only</li>
+        </ul>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Code</h2>
+            <pre>
+                &lt;div>
+
+                &lt;/div>
+            
+                &lt;script>
+                    let mydiv = document.querySelector("div")
+
+                    let heading = document.createElement("h1")
+                    let button = document.createElement("button")
+
+                    heading.innerText = "sparsh"
+                    button.innerText = "Click me"
+
+                    mydiv.<b>append</b>(heading)
+                    mydiv.<b>append</b>(button)
+                &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output</h2>
+            <div id="div1">
+
+            </div>
+        
+            <script>
+                let div1 = document.querySelector("#div1")
+                let heading1 = document.createElement("h1")
+                let button1 = document.createElement("button")
+                heading1.innerText = "sparsh"
+                button1.innerText = "clickme"
+                div1.append(heading1)
+                div1.append(button1)
+            </script>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Code</h2>
+            <pre>
+                &lt;div>
+
+                &lt;/div>
+            
+                &lt;script>
+                    let mydiv = document.querySelector("div")
+
+                    let heading = document.createElement("h1")
+                    let button = document.createElement("button")
+
+                    heading.innerText = "sparsh"
+                    button.innerText = "Click me"
+
+                    mydiv.<b>prepend</b>(heading)
+                    mydiv.<b>prepend</b>(button)
+                &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output</h2>
+            <div id="div2">
+
+            </div>
+        
+            <script>
+                let div2 = document.querySelector("#div2")
+                let heading2 = document.createElement("h1")
+                let button2 = document.createElement("button")
+                heading2.innerText = "sparsh"
+                button2.innerText = "clickme"
+                div2.prepend(heading2)
+                div2.prepend(button2)
+            </script>
+        </div>
+    </div>
+</body>
+</html>

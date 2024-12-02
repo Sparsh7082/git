@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js2.5.4</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .pink{
+            background-color: pink;
+        }
+
+        .aqua{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js2.5.3.html">
+            <button>Previous</button>
+        </a>
+        <h1>CSS className ClassList</h1>
+        <a href="js2.6.1.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="explain">
+        <ul>
+            <li>These are used to overwrite the class with the help of js.</li>
+            <li><b>className</b> removes the previous class and add the new class</li>
+            <li><b>classList</b> add the new class over the previous class which means both the class exist.</li>
+        </ul>
+    </div>
+    <h2 class="center">Example</h2>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Code</h2>
+            <pre>
+    &lt;style>
+        .pink{
+            background-color: pink;
+        }
+
+        .aqua{
+            background-color: aqua;
+        }
+    &lt;/style>
+
+    &lt;h1 class="pink">Hello&lt;/h1>
+
+    &lt;script>
+        let heading = document.querySelector("h1")
+
+        heading.<b>classList</b>.add("aqua")
+        console.log(heading.className);
+        
+    &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output on Browser</h2>
+            <h1 class="aqua">Hello</h1>
+            <hr>
+            <h2 class="center">Output on Console</h2>
+            pink aqua
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Code</h2>
+            <pre>
+    &lt;style>
+        .pink{
+            background-color: pink;
+        }
+
+        .aqua{
+            background-color: aqua;
+        }
+    &lt;/style>
+
+    &lt;h1 class="pink">Hello&lt;/h1>
+
+    &lt;script>
+        let heading = document.querySelector("h1")
+
+        heading.<b>className</b> = "aqua"
+        console.log(heading.className);
+        
+    &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output on Browser</h2>
+            <h1 class="aqua">Hello</h1>
+            <hr>
+            <h2 class="center">Output on Console</h2>
+            aqua
+        </div>
+    </div>
+    <div class="explain">
+        <h2 class="center">Task</h2>
+        <ul>
+            <li>When single click add the class pink</li>
+            <li>When double click add the class aqua</li>
+            <li>When scroll remove all the class</li>
+        </ul>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Code</h2>
+            <pre>
+    &lt;style>
+        .pink{
+            background-color: pink;
+        }
+
+        .aqua{
+            background-color: aqua;
+        }
+    &lt;/style>
+    
+    &lt;h1>Hello&lt;/h1>
+    &lt;button>Click me&lt;/button>
+
+    &lt;script>
+        let heading = document.querySelector("h1")
+        let button = document.querySelector("button")
+
+        button.onclick = function(){
+            heading.className = "pink"
+        }
+
+        button.ondblclick = function(){
+            heading.className = "aqua"
+        }
+        
+        button.onwheel = function(){
+            heading.className = ""
+        }
+    &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output</h2>
+            <h1 id="heading1">Hello</h1>
+            <button id="button1">Click me</button>
+        
+            <script>
+                let heading = document.querySelector("#heading1")
+                let button = document.querySelector("#button1")
+        
+                button.onclick = function(){
+                    heading.className = "pink"
+                }
+        
+                button.ondblclick = function(){
+                    heading.className = "aqua"
+                }
+                
+                button.onwheel = function(){
+                    heading.className = ""
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>
