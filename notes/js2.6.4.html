@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js2.6.4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js2.6.3.html">
+            <button>Previous</button>
+        </a>
+        <h1>Lower case to upper case</h1>
+        <a href="js2.6.4.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Code</h2>
+            <pre>
+    &lt;h1>Lower case to upper case&lt;/h1>
+    &lt;textarea onkeyup="lctouc(event)">&lt;/textarea>
+    &lt;script>
+        let textarea = document.querySelector("textarea")
+        let body = document.querySelector("body")
+
+        let h2 = document.createElement("h2")
+
+        function lctouc(event){
+            let text = event.target.value;
+            h2.innerText = text.toUpperCase()
+        }
+        
+        body.append(h2)
+    &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output</h2>
+            <h1>Lower case to upper case</h1>
+            <textarea onkeyup="lctouc(event)"></textarea>
+            <script>
+                let textarea = document.querySelector("textarea")
+                let body = document.querySelector(".answer")
+                let h2 = document.createElement("h2")
+                function lctouc(event){
+                    let text = event.target.value;
+                    h2.innerText = text.toUpperCase()
+                }
+                body.append(h2)
+            </script>
+        </div>
+    </div>
+</body>
+</html>

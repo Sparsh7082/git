@@ -4,34 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .pink{
-            background-color: pink;
-        }
-
-        .aqua{
-            background-color: aqua;
-        }
-    </style>
 </head>
 <body>
-    <h1>Hello</h1>
-    <button>Click me</button>
-
+    <input type="text" onkeypress="eventobj(event)">
     <script>
-        let heading = document.querySelector("h1")
-        let button = document.querySelector("button")
+        let inp = document.querySelector("input")
 
-        button.onclick = function(){
-            heading.className = "pink"
-        }
-
-        button.ondblclick = function(){
-            heading.className = "aqua"
-        }
-        
-        button.onwheel = function(){
-            heading.className = ""
+        function eventobj(event){
+            console.log(event.target.value);
+            
         }
     </script>
 </body>

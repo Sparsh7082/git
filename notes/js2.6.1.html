@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js2.6.1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js2.5.4.html">
+            <button>Previous</button>
+        </a>
+        <h1>Keyboard Events</h1>
+        <a href="js2.6.2.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="explain">
+        <ul>
+            <li>When we press any key there is some function start running</li>
+        </ul>
+    </div>
+    <div class="explain">
+        <ul>
+            <li>onkeypress (runs -1 idx)</li>
+            <li>onkeydown (runs -1 idx)</li>
+            <li>onkeyup (runs 0 idx)</li>
+        </ul>
+    </div>
+    <h2 class="center">Example</h2>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Code</h2>
+            <pre>
+    &lt;input type="text" onkeypress="keyboardevent()">
+    &lt;script>
+        let inp = document.querySelector("input")
+
+        function keyboardevent(){
+            console.log("I am fired");
+            
+        }
+    &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output on browser</h2>
+            <input type="text">
+            <hr>
+            <h2 class="center">Output on Console</h2>
+            I am fired
+        </div>
+    </div>
+    <h2 class="center">Event Object</h2>
+    <div class="explain">
+        <ul>
+            <li>it helps to pick the value</li>
+            <li><b>Syntax: </b>event.target.value</li>
+        </ul>
+    </div>
+    <h2 class="center">Example</h2>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Code</h2>
+            <pre>
+    &lt;input type="text" <b>onkeypress</b>="eventobj(event)">
+    &lt;script>
+        let inp = document.querySelector("input")
+
+        function eventobj(event){
+            console.log(event.target.value);
+            
+        }
+    &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output on browser</h2>
+            <input type="text" onkeypress="eventobj(event)" id="input1">
+            <hr>
+            <h2 class="center">Output on Console</h2>
+            <p id="output1"></p>
+            <script>
+                let inp = document.querySelector("#input1")
+        
+                function eventobj(event){
+                    document.getElementById("output1").innerHTML = event.target.value
+                }
+            </script>
+            <b class="red">It runs on a -1 idx</b>
+        </div>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Code</h2>
+            <pre>
+    &lt;input type="text" <b>onkeyup</b>="eventobj(event)">
+    &lt;script>
+        let inp = document.querySelector("input")
+
+        function eventobj(event){
+            console.log(event.target.value);
+            
+        }
+    &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output on browser</h2>
+            <input type="text" onkeyup="eventobj1(event)" id="input2">
+            <hr>
+            <h2 class="center">Output on Console</h2>
+            <p id="output2"></p>
+            <script>
+                let inp2 = document.querySelector("#input2")
+        
+                function eventobj1(event){
+                    document.getElementById("output2").innerHTML = event.target.value
+                }
+            </script>
+            <b class="green">It runs on a 0 idx or exact what we type</b>
+        </div>
+    </div>
+</body>
+</html>

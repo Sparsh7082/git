@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js2.6.2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js2.6.1.html">
+            <button>Previous</button>
+        </a>
+        <h1>Char Counter</h1>
+        <a href="js2.6.3.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Code</h2>
+            <pre>
+    &lt;h1>Char counter Application&lt;/h1>
+    &lt;textarea onkeyup="counter(event)">&lt;/textarea>
+    &lt;br>
+
+    &lt;script>
+        let textarea = document.querySelector("textarea")
+        let body = document.querySelector("body")
+        
+        let h2 = document.createElement("h2")
+        let h3 = document.createElement("h3")
+        
+        h2.innerText = "count- ";
+
+        let count;
+        function counter(event){
+            count = event.target.value.length;
+            h3.innerText = count;
+        }
+        
+        h2.style.display = "inline";
+        h3.style.display = "inline";
+
+        body.append(h2,h3)
+
+    &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output</h2>
+            <h1>Char counter Application</h1>
+            <textarea onkeyup="counter(event)"></textarea>
+            <br>
+            <script>
+                let textarea = document.querySelector("textarea")
+                let body = document.querySelector(".answer")
+            
+                let h2 = document.createElement("h2")
+                let h3 = document.createElement("h3")
+                
+                h2.innerText = "count- ";
+            
+                let count;
+                function counter(event){
+                    count = event.target.value.length;
+                    h3.innerText = count;
+                }
+                
+                h2.style.display = "inline";
+                h3.style.display = "inline";
+            
+                body.append(h2,h3)
+            
+            </script>
+        </div>
+    </div>
+</body>
+</html>

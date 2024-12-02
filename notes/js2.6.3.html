@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js2.6.3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="head"><a href="index.html">Home</a></p>
+        <p class="head">HTML</p>
+        <p class="head">CSS</p>
+        <p class="head">JAVASCRIPT</p>
+    </div>
+
+    <div class="topic">
+        <a href="js2.6.2.html">
+            <button>Previous</button>
+        </a>
+        <h1>Upper case error</h1>
+        <a href="js2.6.4.html">
+            <button>Next</button>
+        </a>
+    </div>
+    <div class="field">
+        <div class="code">
+            <h2 class="center">Code</h2>
+            <pre>
+    &lt;h1>Upper case error&lt;/h1>
+    &lt;textarea onkeyup="ucerror(event)">&lt;/textarea>
+
+    &lt;script>
+        let textarea = document.querySelector("textarea")
+        let body = document.querySelector("body")
+
+        let h2 = document.createElement("h2")
+
+        function ucerror(event){
+            let text = event.target.value;
+            if (text == text.toUpperCase()){
+                h2.innerText="error";
+            }
+            else{
+                h2.innerText="";
+            }
+        }
+        
+        body.append(h2)
+    &lt;/script>
+            </pre>
+        </div>
+        <div class="answer">
+            <h2 class="center">Output</h2>
+            <h1>Upper case error</h1>
+            <textarea onkeyup="ucerror(event)"></textarea>
+            <script>
+                let textarea = document.querySelector("textarea")
+                let body = document.querySelector(".answer")
+                let h2 = document.createElement("h2")
+                function ucerror(event){
+                    let text = event.target.value;
+                    if (text == text.toUpperCase()){
+                        h2.innerText="error";
+                        h2.className="red"
+                    }
+                    else{
+                        h2.innerText="";
+                    }
+                }
+                body.append(h2)
+            </script>
+        </div>
+    </div>
+</body>
+</html>
